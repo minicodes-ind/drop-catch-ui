@@ -36,7 +36,7 @@ router.beforeEach(async (to, from) => {
     }
     else{
         if (isAuth) {
-            return false    
+            return 'home'    
         }
     }
     

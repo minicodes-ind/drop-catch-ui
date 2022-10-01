@@ -52,7 +52,7 @@ export default {
   </header> -->
   
     <div class="cont">
-      <!-- <div v-if="spinner" class="row position-absolute top-50 end-50 show">
+      <div v-if="spinner" class="row position-absolute top-50 end-50 show">
         <div class="col">
           <div class="spinner-grow text-info" role="status">
             <span class="visually-hidden">Loading...</span>
@@ -68,7 +68,7 @@ export default {
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-      </div> -->
+      </div>
        <header >
     <navbar  @adduser_popover="handlePopover($event)"  @show_alert="handleShowAlert($event)"/>
   </header>
