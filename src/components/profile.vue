@@ -19,7 +19,7 @@
        mounted() {
 
            this.showPasswordBox=false;
-       this.passwordModel = {
+           this.passwordModel = {
            email: sessionStorage.getItem('email'),
            currentPassword: "",
            password: ""
@@ -33,7 +33,6 @@
            change() { 
                window.scrollBy(0, 500);
                this.showPasswordBox=true;
-               console.log(this.showPasswordBox)
            },
            submit(){
                this.$emit("loading", true);
@@ -111,7 +110,7 @@
            <h4>Password </h4>
                <h1>*******</h1>
            <Button class="p-button change" label="change password" @click="change">Change Password</Button>
-           <div class="passwordBox" v-show="this.showPasswordBox">
+           <div class="passwordBox" v-show="showPasswordBox">
                <form>
                     <div class="row">    
                        
