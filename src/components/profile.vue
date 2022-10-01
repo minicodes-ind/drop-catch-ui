@@ -25,10 +25,8 @@
            password: ""
        };
        },
+        
        
-       props: {
-       showPasswordBox: false
-       },
        methods:{
            change() { 
                window.scrollBy(0, 500);
