@@ -1,8 +1,8 @@
 <script setup>
     import Header from './Header.vue'
 </script>
-<script>
-   export default{
+<script> 
+   export default {
        data() {
            return {
                name:sessionStorage.getItem('name'),
