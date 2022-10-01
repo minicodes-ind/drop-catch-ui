@@ -45,6 +45,7 @@
                     mode: "cors",
                     headers: {
                         "Content-Type": "application/json",
+                        "Authorization": "bearer " + sessionStorage.getItem('token')
                         },
                    
                     body: JSON.stringify(this.passwordModel)
