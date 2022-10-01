@@ -1,20 +1,18 @@
-<script setup>
-    import Header from './Header.vue';
 
-</script>
 <script>
+    import Header from './Header.vue';
     export default{
         data() {
-        return {
-            name:sessionStorage.getItem('name').toUpperCase(),
-            email:sessionStorage.getItem('email').toUpperCase(),
-            showPasswordBox: false,
-            passwordModel: {
-            email:sessionStorage.getItem('email'),
-            currentPassword: "",
-            password: ""
-            }
-        };
+            return {
+                name:sessionStorage.getItem('name').toUpperCase(),
+                email:sessionStorage.getItem('email').toUpperCase(),
+                showPasswordBox: false,
+                passwordModel: {
+                    email:sessionStorage.getItem('email'),
+                    currentPassword: "",
+                    password: ""
+                }
+            };
         },
 
         mounted() {
@@ -83,7 +81,7 @@
                 
                 this.showPasswordBox=false;
                 window.scrollBy(0, -500);
-            }
+            },
 
         }
     }
