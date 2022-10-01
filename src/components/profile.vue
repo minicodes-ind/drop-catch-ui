@@ -110,7 +110,7 @@
            <h4>Password </h4>
                <h1>*******</h1>
            <Button class="p-button change" label="change password" @click="change">Change Password</Button>
-           <div class="passwordBox" v-show="showPasswordBox">
+           <div class="passwordBox" v-show="this.showPasswordBox">
                <form>
                     <div class="row">    
                        
