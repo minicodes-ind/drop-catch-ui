@@ -77,7 +77,6 @@
                 window.scrollBy(0, -500);
             },
             home(){
-                console.log("huiu")
                 this.$router.push('/home');
             },
             cancelReset(){
