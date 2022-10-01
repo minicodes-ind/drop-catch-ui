@@ -18,7 +18,6 @@
 
        mounted() {
 
-           this.showPasswordBox=false;
            this.passwordModel = {
            email: sessionStorage.getItem('email'),
            currentPassword: "",
