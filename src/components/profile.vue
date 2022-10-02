@@ -50,6 +50,7 @@
                .then(response => {
                   if (response){
                        if(response.status == 200){
+                        this.$emit("loading", false);
                        this.$emit("show_alert", {message: "Password Reset Success", type: "success"});
 
                        }

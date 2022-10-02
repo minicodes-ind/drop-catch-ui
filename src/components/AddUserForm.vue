@@ -37,8 +37,6 @@
                         name:sessionStorage.getItem('name'),
                         email:sessionStorage.getItem('email'),
                         url:this.userModel.url,
-                        nickname:this.userModel.nickname
-
                         }
                         )
                     
@@ -48,13 +46,19 @@
                     this.$emit("loading", false);
                     this.$emit("data_added", data);
                     document.getElementById('closeButton').click()
-                    this.$emit("show_alert", {message: "Alert Added Successfully", type: "success"});
+                    if(data.status==200 || data.status==201){
+                        this.$emit("show_alert", {message: data.message, type: "success"});
+                    }
+                    else{
+                        this.$emit("show_alert", {message: data.message, type: "error"});
+                    }
+                    
                 })
                 
                 .catch(err => {
                     console.log(err);
                     this.$emit("show_alert", true);
-                    this.$refs.closeButton.click();
+                    this.$refs.closeButton.$el.click();
                     this.$emit("show_alert", {message: err, type: "error"});
                 })
             }
@@ -92,13 +96,13 @@
                               
                                
                                 <div class="col-md-12">
-                                    <label for="Product URL" class="form-label">Product URL</label>
-                                    <input v-model="userModel.url" type="text" class="form-control" placeholder="Enter the Product URL" id="Product URL">
+                                    <label for="Product URL" class="form-label ">Product URL</label>
+                                    <input v-model="userModel.url" type="text" class="form-control linkbox" placeholder="Enter the Product URL" id="Product URL">
                                 </div>
-                                <div class="col-md-12">
+                                <!-- <div class="col-md-12">
                                     <label for="Nick Name" class="form-label">Nick Name</label>
                                     <input v-model="userModel.nickname" type="text" class="form-control" placeholder="Enter a Nick Name for your product" id="Nick Name">
-                                </div>
+                                </div> -->
                             </div>
                         </form>
                     </div>
@@ -114,6 +118,10 @@
 </template>
 
 <style scoped>
+.linkbox{
+    height:70px;
+    word-wrap: break-word;
+}
 .p-button{
     margin-left: 5px;
 }

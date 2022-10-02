@@ -203,7 +203,7 @@
                 <div v-show="this.isOtpSent" class="p-col-12 p-lg-3 box">
                     <div class="p-inputgroup">
                         <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-                        <Password :feedback="false" toggleMask pInputText class = "tb"  v-model="this.onetimepass" placeholder="Enetr OTP"/>   
+                        <Password :feedback="false" toggleMask pInputText class = "tb"  v-model="this.onetimepass" placeholder="Enter OTP"/>   
                         <!--<span class="p-inputgroup-addon">.00</span>-->
                     </div>
                 </div>
