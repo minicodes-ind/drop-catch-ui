@@ -203,7 +203,7 @@ h4{
     margin-right:5px ;
 }
 .mainContainer{
-    width:350px;
+    width:315px;
     margin: auto;
     margin-top: 250px;
     

@@ -19,6 +19,9 @@ import Alert from './components/Alert.vue';
 import canAccess from './auth/canAccess';
 import Password from 'primevue/password';
 import Card from 'primevue/card';
+import ConfirmDialog from 'primevue/confirmdialog';
+import ConfirmationService from 'primevue/confirmationservice';
+import InputText from 'primevue/inputtext';
 
 //Prime Vue imports end
 
@@ -49,6 +52,9 @@ app
 .use(Alert)
 .use(router)
 .use(Password)
+.use(ConfirmDialog)
+.use(ConfirmationService);
+
 ;
 app.config.globalProperties.API_URL = import.meta.env.VITE_api;
 app.component("Button", Button);
@@ -58,6 +64,8 @@ app.component("Column", Column);
 app.component("Alert", Alert);
 app.component("Password", Password);
 app.component("Card", Card);
+app.component("ConfirmDialog", ConfirmDialog);
+app.component("InputText", InputText);
 
 
 

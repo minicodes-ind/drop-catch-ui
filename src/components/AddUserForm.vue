@@ -48,7 +48,7 @@
                     this.$emit("loading", false);
                     this.$emit("data_added", data);
                     document.getElementById('closeButton').click()
-                    this.$emit("show_alert", {message: "User Added Successfully", type: "success"});
+                    this.$emit("show_alert", {message: "Alert Added Successfully", type: "success"});
                 })
                 
                 .catch(err => {

@@ -72,7 +72,10 @@ export default{
                             headers: {
                                 "Content-Type": "application/json"
                             },
-                            body: JSON.stringify(this.loginModel)
+                            body: JSON.stringify({
+                                email: this.loginModel.email.toLowerCase(),
+                                password: this.loginModel.password
+                            })
                             
                         })
                         .then(response => response.json())
@@ -277,6 +280,8 @@ export default{
     height: 550px;
 }
 h4{
+    margin-top: 15px;
+    margin-bottom: 25px;
     text-align: center;
     color: white;
 }
@@ -561,7 +566,7 @@ h2{
     .cont{  
     position: relative; 
     float: left; 
-    padding: 50px;
+    padding: 10px;
     
     border:2px solid rgb(183, 187, 185);
     border-radius: 50px ;
@@ -576,6 +581,8 @@ h2{
     margin-top: 10px;
     position: relative;
     margin-left: 0px;
+    padding:5px;
+    
 }
 .box{
     margin-top: 10px;
@@ -583,17 +590,16 @@ h2{
 }
 .tb{
     border:1px solid white;
-    width: 160px;
+    width: 280px;
     height: 39px;
 }
 .loginBox{
     position: relative;
     box-shadow: 0px 10px rgb(195, 199, 201);
-    padding: 50px;
+    padding: 20px;
     border-radius:50px ;
-    width:300px;
+    width:360px;
     height:350px;
-    margin: auto;
     margin-bottom: 75px;
     margin-top:90px;
     

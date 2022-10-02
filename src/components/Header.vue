@@ -16,15 +16,15 @@
 </script>
 <template>
     <nav class="navbar navbar-expand-lg ">
-                <Button  @click="backtohome" 
+                <Button  @click="backtohome" title="Home"
                     class="p-button-raised p-button-rounded homeButton"  
                     label="" icon="pi pi-home" iconPos="right"></Button>
 
-                    <Button  @click="alerts" 
+                    <Button  @click="alerts" title="Alerts List"
                     class=" p-button-raised p-button-rounded alertsButton"  
                      icon="pi pi-bell" iconPos="right"></Button>
 
-                     <Button  @click="profile" 
+                     <Button  @click="profile" title="Profile"
                     class=" p-button-raised p-button-rounded profileButton"  
                      icon="pi pi-user" iconPos="right"></Button>
     </nav>

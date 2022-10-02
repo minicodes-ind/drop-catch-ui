@@ -99,7 +99,11 @@
                         headers: {
                             "Content-Type": "application/json"
                         },
-                        body: JSON.stringify(this.signupModel)
+                        body: JSON.stringify({
+                            name:this.signupModel.name,
+                            email: this.signupModel.email.toLowerCase(),
+                            password: this.signupModel.password
+                        })
                         
                     })
                     .then(response => response.json())
@@ -144,14 +148,14 @@
             <div class="welcomeBanner">
         <div class="logoBox">
             <h1 class="projectTitle">
-                Meet Mr.Catch, who cathes all your favourite price drops
+                Meet Mr.Catch, who catches all your favourite price drops
                 
             </h1>
             <div>
                 <img class="helloAnim" src="../../assets/helloanimation.gif"/>
             </div>
           
-            <h3>Step 1: copy your favourite link</h3>
+            <h3>Step 1: copy the link of your favourite product</h3>
             <h3>Step 2: Give it to us</h3>
             <h3>Step 3: And get notified whenever the price drops</h3>
             <h2 class="yeah">Yeah, it's simple as that !</h2>
@@ -316,6 +320,8 @@
     height: 550px;
 }
 h4{
+    margin-top: 15px;
+    margin-bottom: 25px;
     text-align: center;
     color: white;
 }
@@ -600,7 +606,7 @@ h2{
     .cont{  
     position: relative; 
     float: left; 
-    padding: 50px;
+    padding: 10px;
     
     border:2px solid rgb(183, 187, 185);
     border-radius: 50px ;
@@ -615,6 +621,8 @@ h2{
     margin-top: 10px;
     position: relative;
     margin-left: 0px;
+    padding:5px;
+    
 }
 .box{
     margin-top: 10px;
@@ -622,15 +630,15 @@ h2{
 }
 .tb{
     border:1px solid white;
-    width: 160px;
+    width: 280px;
     height: 39px;
 }
 .loginBox{
     position: relative;
     box-shadow: 0px 10px rgb(195, 199, 201);
-    padding: 50px;
+    padding: 20px;
     border-radius:50px ;
-    width:300px;
+    width:360px;
     height:450px;
     margin: auto;
     margin-bottom: 75px;
@@ -648,6 +656,7 @@ h2{
     font-size: small;
 }
 .projectTitle{
+    
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 800;

@@ -1,12 +1,14 @@
 <script setup>
-    import Header from './Header.vue'
+    import Header from './Header.vue';
+    import ConfirmDialog from 'primevue/confirmdialog';
+
 </script>
 <script> 
    export default {
        data() {
            return {
-               name:sessionStorage.getItem('name'),
-               email:sessionStorage.getItem('email'),
+               name:sessionStorage.getItem('name').toUpperCase(),
+               email:sessionStorage.getItem('email').toUpperCase(),
                showPasswordBox: false,
                passwordModel: {
                    email:sessionStorage.getItem('email'),
@@ -78,6 +80,25 @@
                this.showPasswordBox=false;
                window.scrollBy(0, -500);
            },
+           confirmPosition(position) {
+                this.$confirm.require({
+                    group: 'positionDialog',
+                    message: `Are you sure you want to Logout of ${sessionStorage.getItem('email').toUpperCase()}`,
+                    header: 'Logout Confirmation',
+                    icon: 'pi pi-info-circle',
+                    position: position,
+                    accept: () => {
+                            sessionStorage.clear()
+                            this.$router.go()
+                    },
+                    reject: () => {
+                        // this.$toast.add({severity:'error', summary:'Rejected', detail:'You have rejected', life: 3000});
+                    },
+                    onHide: () => {
+                        // this.$toast.add({severity:'error', summary:'Hide', detail:'You have hidden', life: 3000});
+                    }
+                });
+            },
 
        }
    }
@@ -85,6 +106,16 @@
 
 
 <template>
+    <ConfirmDialog :breakpoints="{'960px': '75vw', '640px': '100vw'}" :style="{width: '50vw'}"></ConfirmDialog>
+    <ConfirmDialog group="templating">
+                    <template #message="slotProps">
+                        <div class="flex p-4">
+                            <i :class="slotProps.message.icon" style="font-size: 1.5rem"></i>
+                            <p class="pl-2">{{slotProps.message.message}}</p>
+                        </div>
+                    </template>
+            </ConfirmDialog>
+            <ConfirmDialog group="positionDialog"></ConfirmDialog>
    <header>
    <Header @adduser_popover="handlePopover($event)" />
  </header>
@@ -106,7 +137,9 @@
                <h2 class="detail">{{email}}</h2>
            <h4>Password </h4>
                <h1>*******</h1>
-           <Button class="p-button change" label="change password" @click="change()">Change Password</Button>
+           <Button class="p-button change" label="change password" @click="change()">Change Password</Button><br>
+           <Button @click="confirmPosition('bottom')"  label="Logout" class="p-button change"></Button>
+
            <div class="passwordBox" v-show="showPasswordBox">
                <form>
                     <div class="row">    
@@ -195,6 +228,9 @@ body{
    
 }
 .change{
+    text-align: center;
+    margin-bottom: 5px;
+    min-width: 150px;
    background-color: #380650;
    border: #380650;
 }

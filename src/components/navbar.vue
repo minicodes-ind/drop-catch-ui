@@ -7,6 +7,7 @@
 <template>
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
+            <img class="DClogo" src="../assets/DCLOGO2.png">
             <a class="navbar-brand" href="#">Dropcatch&trade;</a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     
@@ -15,6 +16,10 @@
     </nav>
 </template>
 <style scoped>
+    .DClogo{
+        width:50px;
+        margin-right: 5px;
+    }
     .navbar-brand{
         color:white
     }
