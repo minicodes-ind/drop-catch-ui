@@ -162,7 +162,7 @@
                     :header="headers.replace('_', ' ').toUpperCase()" :key="headers" :sortable="true"></Column>
                     <Column :exportable="false"  class="cols">
                         <template #body="usersData">
-                            <Button @click="confirmPosition('bottom', usersData.data.url, usersData.data.productname)" 
+                            <Button @click="confirmPosition('bottom', usersData.data.url, usersData.data.product_name)" 
                             icon="pi pi-trash" label="Remove" class="p-button-danger mr-2" title="Delete Alert"></Button>
 
                             <Button icon="pi pi-globe" label="View Product" class="  mr-2" 
