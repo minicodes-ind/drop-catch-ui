@@ -139,16 +139,16 @@
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown" 
                         :rowsPerPageOptions="[5,10,25]"
                         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} Users" :alwaysShowPaginator="false"
-                        :globalFilterFields="['productname','url','initialPrice']"
+                        :globalFilterFields="['product_name','url','current_Price']"
                         v-model:filters="filters" filterDisplay="menu"
                         :rowHover="true"
                         >
                         <template #header>
                         <div class="flex justify-content-center align-items-center">
-                            <h5 class="m-0">Search &nbsp;</h5>
+                            
                             <span class="p-input-icon-left">
                                 <i class="pi pi-search" />
-                                <InputText v-model="filters['global'].value" placeholder="url, productname or price" />
+                                <InputText v-model="filters['global'].value" placeholder="Search here..." />
                             </span>
                         </div>
                     </template>
@@ -158,14 +158,15 @@
                     <template #loading>
                         Loading Alerts Please wait.
                     </template>
-                    <Column v-for="headers of tableHeaders" :field="headers" 
+                    <Column v-for="headers of tableHeaders" :field="headers" style="text-align: center;
+                   font-size: medium;"
                     :header="headers.replace('_', ' ').toUpperCase()" :key="headers" :sortable="true"></Column>
-                    <Column :exportable="false"  class="cols">
-                        <template #body="usersData">
+                    <Column :exportable="false"  class="cols" >
+                        <template #body="usersData" >
                             <Button @click="confirmPosition('bottom', usersData.data.url, usersData.data.product_name)" 
-                            icon="pi pi-trash" label="Remove" class="p-button-danger mr-2" title="Delete Alert"></Button>
+                            icon="pi pi-trash" label="Remove" class="p-button-danger mr-2 tablebtn" title="Delete Alert"></Button>
 
-                            <Button icon="pi pi-globe" label="View Product" class="  mr-2" 
+                            <Button icon="pi pi-globe" label="View Product" class="mr-2 tablebtn" 
                             @click="viewProduct(usersData.data.url)" title="View product on site"></Button>
 
                         </template>
@@ -177,6 +178,10 @@
         </template>
 
         <style scoped>
+            .tablebtn{
+                margin-top: 3px;
+                min-width: 150px;
+            }
         .container-fluid{
             margin-top: 130px;
             padding: 50px 20px;
