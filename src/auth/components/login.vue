@@ -126,7 +126,7 @@ export default{
                 
             </h1>
             <div>
-                <img class="helloAnim" src="../../assets/helloanimation.gif"/>
+                <img class="helloAnim" src="../../assets/welcome-hello.gif"/>
             </div>
           
             <h3>Step 1: copy the link of your favourite product</h3>
@@ -214,6 +214,7 @@ export default{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     .helloAnim{
+        margin:auto;
         height:300px
     }
     .welcomeBanner{

@@ -20,11 +20,12 @@
         props: {
             showModal: false
         },
-        emits: ["opened_modal", "spinner", "show_alert", "loading", "data_added"],
+        emits: ["opened_modal", "spinner", "show_alert", "loading" , "addanim", "data_added"],
         methods: {
 
             handleUserSubmit() {
                 if(this.userModel.url.startsWith('https://amzn')){
+                    this.$refs.closeButton.$el.click();
                 this.$emit("loading", true);
                 fetch(`${this.API_URL}/api/alerts/add`, {
                     method: "POST",
@@ -44,9 +45,10 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                    this.$refs.closeButton.$el.click();
+
                     this.$emit("loading", false);
                     this.$emit("data_added", data);
-                    document.getElementById('closeButton').click()
                     if(data.status==200 || data.status==201){
                         this.$emit("show_alert", {message: data.message, type: "success"});
                     }
@@ -58,6 +60,7 @@
                 
                 .catch(err => {
                     console.log(err);
+                    this.$emit("loading", false);
                     this.$emit("show_alert", true);
                     this.$refs.closeButton.$el.click();
                     this.$emit("show_alert", {message: err, type: "error"});

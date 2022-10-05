@@ -14,6 +14,7 @@ import profile from './components/profile.vue'
 export default {
   data() {
     return {
+      addanim:false,
       spinner: false,
       showPopup: false,
       newData: null,
@@ -40,17 +41,21 @@ export default {
        console.log("Reached shown alert");
       this.alertMessage = "";
       this.alertType = "";
+    },
+    handleAddAnim(event){
+      this.addanim=event
     }
   }
 }
 </script>
 
 <template>
+  
   <body>
   <!-- <header>
     <Header @adduser_popover="handlePopover($event)" />
   </header> -->
-  
+ 
     <div class="cont">
       <div v-if="spinner" class="row position-absolute top-50 end-50 show">
         <div class="col">
@@ -67,35 +72,57 @@ export default {
           <div class="spinner-grow text-warning" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
+          
         </div>
       </div>
+
+      
        <header >
     <navbar  @adduser_popover="handlePopover($event)"  @show_alert="handleShowAlert($event)"/>
+   
+   
   </header>
+
+<div class="cont"> 
+  <div v-if="addanim" class="row position-absolute top-50 end-50 show">
+        <div class="anim" >
+          <img src="../src/assets/addAnimation.gif"/>
+        </div>
+  </div>
+  </div>
        <router-view 
-       @loading="handleLoading($event)"  
+       @loading="handleLoading($event)" 
+       @addanim="handleAddAnim($event)" 
        @adduser_popover="handlePopover($event)" 
        @show_alert="handleShowAlert($event)"
        
        >
+      
       </router-view>
 
       <!-- <login @loading="handleLoading($event)"  @show_alert="handleShowAlert($event)"/> -->
       <!-- <Users @loading="handleLoading($event)" :newUser="newData" @show_alert="handleShowAlert($event)"/> -->
       <Alert :[alertType]= true :message="alertMessage" @shown_alert="handleShownAlert()"/>
+
+
     </div>
     <AddUserForm :showModal="showPopup" 
+    @addanim="handleAddAnim($event)" 
     @opened_modal="showPopup = false" 
     @loading="handleLoading($event)"
     @data_added="handleDataAdd($event)" 
     @show_alert="handleShowAlert($event)"
     />
-
+   
   
 </body>
 </template>
 <style scoped>
-  .cont{
+  .anim{
+    margin-left: 150px;
+  }
+
+.cont{
    position: relative;
 
   }

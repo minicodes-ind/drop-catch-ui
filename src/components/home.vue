@@ -12,7 +12,9 @@ export default {
         Adsense
     },
    
-    
+    mounted(){
+        window.scrollBy(0, -1000);
+    },
         methods:{
            
         addAmazon(){   
