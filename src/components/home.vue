@@ -1,5 +1,7 @@
 
 <script setup>
+  
+     
     import Header from './Header.vue';
     import Adsense from './Adsense.vue'
 </script>
@@ -25,6 +27,7 @@ export default {
 
 
 <template>
+    
      <header>
     <Header @adduser_popover="handlePopover($event)" />
   </header>
