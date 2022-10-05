@@ -153,7 +153,7 @@
                         </div>
                     </template>
                     <template #empty>
-                        Go Home Add New Alerts.
+                        No Alerts Found
                     </template>
                     <template #loading>
                         Loading Alerts Please wait.

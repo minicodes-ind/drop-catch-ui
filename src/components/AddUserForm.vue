@@ -24,6 +24,7 @@
         methods: {
 
             handleUserSubmit() {
+                if(this.userModel.url.startsWith('https://amzn')){
                 this.$emit("loading", true);
                 fetch(`${this.API_URL}/api/alerts/add`, {
                     method: "POST",
@@ -62,6 +63,11 @@
                     this.$emit("show_alert", {message: err, type: "error"});
                 })
             }
+            
+        else{
+            this.$emit("show_alert", {message: "unsupported url", type: "error"});
+        }
+    }
         },
         watch: {
             showModal(newVal, oldVal) {

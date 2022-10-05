@@ -5,7 +5,7 @@
                 this.$router.push('/home')
             },
             alerts(){
-               this.$router.push('/users')
+               this.$router.push('/alert-list')
             },
             profile(){
                 this.$router.push('/profile')

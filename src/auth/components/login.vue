@@ -85,7 +85,7 @@ export default{
                             sessionStorage.setItem('name', response.name)                           
                             this.$emit("loading", false);
                             if(response.Token){
-                                this.$emit("show_alert", {message: "Login Success", type: "success"});
+                                //this.$emit("show_alert", {message: "Login Success", type: "success"});
                                 this.$router.push('/home');
                         }
                         else{
