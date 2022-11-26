@@ -159,8 +159,7 @@ export default{
             <div v-show="!forgotPassword" class="p-col-12 p-lg-4 box">
                 <div class="p-inputgroup">
                     <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-                    <Password :feedback="false" toggleMask pInputText class = "tb"  v-model="loginModel.password" 
-                    placeholder="Password"  @keyup.enter="login"/>   
+                    <Password :feedback="false" toggleMask pInputText class = "tb"  v-model="loginModel.password" placeholder="Password"/>   
                 </div>
                 <span @click="forgot" class="forgot">Forgot Password?</span>
 
@@ -170,7 +169,7 @@ export default{
                 <Button @click="login" type="button" label="Login"
                 class="    lb"></Button>
             </div>
-            <div v-show="forgotPassword" class="loginbutton" >
+            <div v-show="forgotPassword" class="loginbutton">
                 <Button @click="reset" type="button" label="Reset Password"
                 class="     lb"></Button>
             </div>

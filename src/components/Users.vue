@@ -49,10 +49,8 @@
                         .then(response => response.json())
                         .then(data => {
                             this.usersData = data.response;
-                            this.usersData.map(data => data.current_Price = "₹ " + data.current_Price)
                             this.tableData();
                             console.log("Users Data", this.usersData);
-
                         })
                     },
                     deleteAlert(url){
@@ -134,16 +132,16 @@
                         <td class="p-1"><button class="btn btn-danger">Delete</button></td>
                     </tr>
                 </table> -->
-                <h2 style="text-align: center;">Alert List</h2>
+                <h2 style="text-align: center;">ALert List</h2>
             <div class="card">
-                <DataTable :value="usersData" :paginator="true" :rows="5" class="p-datatable-lg"
+                <DataTable :value="usersData" :paginator="true" :rows="5" 
                         responsiveLayout="stack" 
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown" 
                         :rowsPerPageOptions="[5,10,25]"
                         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} Users" :alwaysShowPaginator="false"
                         :globalFilterFields="['product_name','url','current_Price']"
                         v-model:filters="filters" filterDisplay="menu"
-                        :rowHover="true" showGridlines 
+                        :rowHover="true"
                         >
                         <template #header>
                         <div class="flex justify-content-center align-items-center">
@@ -154,18 +152,10 @@
                             </span>
                         </div>
                     </template>
-                    <template #empty >
-                        <div class="boxforSearch">
-                            <img class="searchAnim" src="../../src/assets/searchAnim.gif">
-                            <div>Sorry Boss, there is nothing like 
-                                <strong>"{{filters['global'].value}}"</strong>
-                            </div>
-                        </div>
-                        
-                        
+                    <template #empty>
+                        No Alerts Found
                     </template>
                     <template #loading>
-                        <img src="../../src/assets/searchAnim.gif">
                         Loading Alerts Please wait.
                     </template>
                     <Column v-for="headers of tableHeaders" :field="headers" style="text-align: center;
@@ -188,18 +178,6 @@
         </template>
 
         <style scoped>
-            .boxforSearch{
-                width: auto;
-                margin: auto;   
-                width: 300px;
-                padding: 22px;
-                border-radius: 30px;
-                background-color: white;
-            }
-            .searchAnim{
-                margin: auto;
-                width: 200px;
-            }
             .tablebtn{
                 margin-top: 3px;
                 min-width: 150px;
@@ -218,7 +196,4 @@
             box-shadow: -3px 3px rgb(220, 221, 223);
             background-color: rgb(212, 233, 252);
         }
-        
-
-
         </style>

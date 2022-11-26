@@ -130,7 +130,7 @@
                     })
                 }
                 else{
-                this.$emit("show_alert", {message: " ", type: "info"});
+                this.$emit("show_alert", {message: this.onetimepass+" "+processed, type: "info"});
             }
                 
             }
@@ -195,8 +195,7 @@
                 <div class="p-col-12 p-lg-3 box">
                     <div class="p-inputgroup">
                         <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-                        <Password :feedback="false" toggleMask pInputText class = "tb"  v-model="this.repassword"
-                         placeholder="Re-Enter Password" @keyup.enter="sendOTP()"/>   
+                        <Password :feedback="false" toggleMask pInputText class = "tb"  v-model="this.repassword" placeholder="Re-Enter Password"/>   
                         <!--<span class="p-inputgroup-addon">.00</span>-->
                     </div>
                 </div>
@@ -204,8 +203,7 @@
                 <div v-show="this.isOtpSent" class="p-col-12 p-lg-3 box">
                     <div class="p-inputgroup">
                         <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-                        <Password :feedback="false" toggleMask pInputText class = "tb"  v-model="this.onetimepass" 
-                        placeholder="Enter OTP" @keyup.enter="signup()"/>   
+                        <Password :feedback="false" toggleMask pInputText class = "tb"  v-model="this.onetimepass" placeholder="Enter OTP"/>   
                         <!--<span class="p-inputgroup-addon">.00</span>-->
                     </div>
                 </div>
@@ -319,10 +317,10 @@
     border-radius: 50px ;
     box-shadow: 0px 10px rgb(238, 200, 214);
     width: 500px;
-    height: 650px;
+    height: 550px;
 }
 h4{
-    margin-top: 1px;
+    margin-top: 15px;
     margin-bottom: 25px;
     text-align: center;
     color: white;
@@ -350,7 +348,7 @@ h4{
     margin-bottom: 10px;
     margin-top:10px;
     /* margin-left: 540px; */
-    height:520px
+    height:390px
 }
 .loginbutton{
     margin: auto;
@@ -458,7 +456,7 @@ h4{
     border-radius: 50px ;
     box-shadow: 0px 10px rgb(197, 207, 207);
     width: auto;
-   
+    height: auto;
 }
 .logoBox{
     float:none;
@@ -532,7 +530,7 @@ h2{
     border-radius: 50px ;
     box-shadow: 0px 10px rgb(197, 207, 207);
     width: auto;
-    
+    height: auto;
 }
 .logoBox{
     float:none;
