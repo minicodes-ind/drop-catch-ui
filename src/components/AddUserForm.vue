@@ -23,7 +23,6 @@
         emits: ["opened_modal", "spinner", "show_alert", "loading" , "addanim", "data_added"],
         methods: {
 
-           
             handleUserSubmit() {
                 const trimmedURL = this.userModel.url; 
                 const position = trimmedURL.search(/https/i);
