@@ -27,9 +27,7 @@
                 const trimmedURL = this.userModel.url; 
                 const position = trimmedURL.search(/https/i);
                 this.userModel.url = trimmedURL.slice(position);
-                const position2 =   this.userModel.url.search(" ");
-                this.userModel.url =  this.userModel.url.slice(0,position2);
-               
+                
 
                 console.log("url 1",this.userModel.url)
                 if(this.userModel.url.startsWith('https://amzn')){
