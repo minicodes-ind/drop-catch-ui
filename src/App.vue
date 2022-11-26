@@ -85,7 +85,7 @@ export default {
 
 <div v-if="addanim" class="cont"> 
   <div class="row outer position-absolute show" >
-        <div class="card" >
+        <div class="carding" >
           <img class="anim" src="../src/assets/addAnimation.gif"/>
         </div>
   </div>
@@ -118,7 +118,7 @@ export default {
 </body>
 </template>
 <style scoped>
-  .card{
+  .carding{
     width:auto;
     margin: auto;
   }

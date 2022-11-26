@@ -24,7 +24,14 @@
         methods: {
 
             handleUserSubmit() {
-                if(this.userModel.url.startsWith('https://amzn')){
+                const trimmedURL = this.userModel.url; 
+                const position = trimmedURL.search(/https/i);
+                const url1 = trimmedURL.slice(position);
+                const position2 = url1.search(" ");
+                const url = url1.slice(0,position2);
+
+                console.log("url", url )
+                if(url.startsWith('https://amzn')){
                     this.$refs.closeButton.$el.click();
                 this.$emit("addanim", true);
                 fetch(`${this.API_URL}/api/alerts/add`, {
@@ -38,7 +45,7 @@
                         {
                         name:sessionStorage.getItem('name'),
                         email:sessionStorage.getItem('email'),
-                        url:this.userModel.url,
+                        url:url,
                         }
                         )
                     
@@ -102,11 +109,17 @@
                     <div class="container-fluid">
                         <form>
                             <div class="row">
-                              
+                              <div>
+                                    <p>
+                                        1. Choose the share option of your favourite product <br>
+                                        2. Choose copy link <br>
+                                        3. Paste the link here and click Add Alert !
+                                     </p>
+                              </div>
                                
                                 <div class="col-md-12">
-                                    <label for="Product URL" class="form-label ">Product URL</label>
-                                    <input v-model="userModel.url" type="text" class="form-control linkbox" placeholder="Enter the Product URL" id="Product URL">
+                                    <label for="Product URL" class="form-label ">Enter URL Here</label>
+                                    <input v-model="userModel.url" type="text" class="form-control linkbox" placeholder="Example: https://amzn.eu/d/11MN43s" id="Product URL">
                                 </div>
                                 <!-- <div class="col-md-12">
                                     <label for="Nick Name" class="form-label">Nick Name</label>
