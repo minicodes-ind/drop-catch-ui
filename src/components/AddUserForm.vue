@@ -23,17 +23,21 @@
         emits: ["opened_modal", "spinner", "show_alert", "loading" , "addanim", "data_added"],
         methods: {
 
+           
             handleUserSubmit() {
                 const trimmedURL = this.userModel.url; 
                 const position = trimmedURL.search(/https/i);
-                const url1 = trimmedURL.slice(position);
-                const position2 = url1.search(" ");
-                const url = url1.slice(0,position2);
+                this.userModel.url = trimmedURL.slice(position);
+                const position2 =   this.userModel.url.search(" ");
+                this.userModel.url =  this.userModel.url.slice(0,position2);
+               
 
-                console.log("url", url )
-                if(url.startsWith('https://amzn')){
-                    this.$refs.closeButton.$el.click();
+                console.log("url 1",this.userModel.url)
+                if(this.userModel.url.startsWith('https://amzn')){
+                this.$refs.closeButton.$el.click();
                 this.$emit("addanim", true);
+                console.log("url 1",this.userModel.url)
+
                 fetch(`${this.API_URL}/api/alerts/add`, {
                     method: "POST",
                     mode: "cors",
@@ -45,7 +49,7 @@
                         {
                         name:sessionStorage.getItem('name'),
                         email:sessionStorage.getItem('email'),
-                        url:url,
+                        url:this.userModel.url,
                         }
                         )
                     

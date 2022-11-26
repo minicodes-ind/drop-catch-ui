@@ -101,7 +101,7 @@
                         },
                         body: JSON.stringify({
                             name:this.signupModel.name,
-                            email: this.signupModel.email.toLowerCase(),
+                            email: this.signupModel.email.toLowerCase().trim(),
                             password: this.signupModel.password
                         })
                         

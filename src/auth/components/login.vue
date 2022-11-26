@@ -63,6 +63,7 @@ export default{
             this.$router.push('/signup');
          },
             login() {
+                
                 if(this.loginModel.email ){
                     if(this.loginModel.password){
                         this.$emit("loading", true);
@@ -73,7 +74,7 @@ export default{
                                 "Content-Type": "application/json"
                             },
                             body: JSON.stringify({
-                                email: this.loginModel.email.toLowerCase(),
+                                email: this.loginModel.email.toLowerCase().trim(),
                                 password: this.loginModel.password
                             })
                             
