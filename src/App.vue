@@ -83,13 +83,13 @@ export default {
    
   </header>
 
-<div class="cont"> 
-  <div v-if="addanim" class="row position-absolute top-50 end-50 show">
-        <div class="anim" >
-          <img src="../src/assets/addAnimation.gif"/>
+<div v-if="addanim" class="cont"> 
+  <div class="row outer position-absolute show" >
+        <div class="card" >
+          <img class="anim" src="../src/assets/addAnimation.gif"/>
         </div>
   </div>
-  </div>
+</div>
        <router-view 
        @loading="handleLoading($event)" 
        @addanim="handleAddAnim($event)" 
@@ -118,18 +118,50 @@ export default {
 </body>
 </template>
 <style scoped>
-  .anim{
-    margin-left: 150px;
+  .card{
+    width:auto;
+    margin: auto;
   }
-
+  .anim{
+    position: absolute;
+    width: 600px;
+    margin: auto;
+    background-color: rgb(168, 164, 164);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .outer{
+    position: absolute;
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+  }
 .cont{
-   position: relative;
-
+  width: 600px;
+  width:auto;
   }
   body{
     background-color: rgb(255, 255, 255);
   }
   .show {
-    z-index: 1000000;
+    z-index: 90000000;
   }
+
+  @media only screen and (max-width: 425px) {
+    .anim{
+    position: absolute;
+    width: 370px;
+    margin: auto;
+    background-color: rgb(168, 164, 164);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 120px;
+  }
+  .outer{
+    position: absolute;
+    width: auto;
+    margin: auto;
+    padding: 10px;
+  }
+}
 </style>

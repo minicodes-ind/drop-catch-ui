@@ -26,7 +26,7 @@
             handleUserSubmit() {
                 if(this.userModel.url.startsWith('https://amzn')){
                     this.$refs.closeButton.$el.click();
-                this.$emit("loading", true);
+                this.$emit("addanim", true);
                 fetch(`${this.API_URL}/api/alerts/add`, {
                     method: "POST",
                     mode: "cors",
@@ -47,7 +47,7 @@
                 .then(data => {
                     this.$refs.closeButton.$el.click();
 
-                    this.$emit("loading", false);
+                    this.$emit("addanim", false);
                     this.$emit("data_added", data);
                     if(data.status==200 || data.status==201){
                         this.$emit("show_alert", {message: data.message, type: "success"});
@@ -60,7 +60,7 @@
                 
                 .catch(err => {
                     console.log(err);
-                    this.$emit("loading", false);
+                    this.$emit("addanim", false);
                     this.$emit("show_alert", true);
                     this.$refs.closeButton.$el.click();
                     this.$emit("show_alert", {message: err, type: "error"});
