@@ -165,7 +165,7 @@
                         
                     </template>
                     <template #loading>
-                        <img src="../src/assets/searchAnim.gif">
+                        <img src="../../src/assets/searchAnim.gif">
                         Loading Alerts Please wait.
                     </template>
                     <Column v-for="headers of tableHeaders" :field="headers" style="text-align: center;
