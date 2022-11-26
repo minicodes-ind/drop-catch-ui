@@ -113,17 +113,11 @@
                     <div class="container-fluid">
                         <form>
                             <div class="row">
-                              <div>
-                                    <p>
-                                        1. Choose the share option of your favourite product <br>
-                                        2. Choose copy link <br>
-                                        3. Paste the link here and click Add Alert !
-                                     </p>
-                              </div>
+                              
                                
                                 <div class="col-md-12">
-                                    <label for="Product URL" class="form-label ">Enter URL Here</label>
-                                    <input v-model="userModel.url" type="text" class="form-control linkbox" placeholder="Example: https://amzn.eu/d/11MN43s" id="Product URL">
+                                    <label for="Product URL" class="form-label ">Product URL</label>
+                                    <input v-model="userModel.url" type="text" class="form-control linkbox" placeholder="Enter the Product URL" id="Product URL">
                                 </div>
                                 <!-- <div class="col-md-12">
                                     <label for="Nick Name" class="form-label">Nick Name</label>
