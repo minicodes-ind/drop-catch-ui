@@ -241,12 +241,12 @@ export default {
     .container-fluid {
     width:420px;
     margin-top: 130px;
-    padding: 5px 8px;
+    padding: 5px 12px;
 }
 .card {
     padding: 3px;
     border-radius: 5px;
-    box-shadow: -3px 3px rgb(235, 235, 235);
+    box-shadow:  1px 10px 10px 10px rgb(199, 194, 194);
     background-color: rgb(199, 208, 218);
 }
 
