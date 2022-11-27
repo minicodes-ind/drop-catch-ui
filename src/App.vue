@@ -1,13 +1,13 @@
 <script setup>
-import navbar from './components/navbar.vue'
+import navbar from './components/navbar.vue';
 import Users from './components/Users.vue';
 import AddUserForm from './components/AddUserForm.vue';
 import Alert from './components/Alert.vue';
-import login from './auth/components/login.vue'
+import login from './auth/components/login.vue';
 import signup from './auth/components/signup.vue';
 import home from './components/home.vue';
-import profile from './components/profile.vue'
-
+import profile from './components/profile.vue';
+import footerBar from './components/footerBar.vue';
 </script>
 
 <script>
@@ -79,8 +79,6 @@ export default {
       
        <header >
     <navbar  @adduser_popover="handlePopover($event)"  @show_alert="handleShowAlert($event)"/>
-   
-   
   </header>
 
 <div v-if="addanim" class="cont"> 
@@ -114,7 +112,9 @@ export default {
     @show_alert="handleShowAlert($event)"
     />
    
-  
+  <footer>
+    <footerBar />
+  </footer>
 </body>
 </template>
 <style scoped>
