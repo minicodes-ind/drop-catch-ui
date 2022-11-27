@@ -87,6 +87,8 @@
     
              
         signup() {
+            
+            window.scrollBy(0, -1500);
             if(this.onetimepass){
                 const otpgot = sessionStorage.getItem('address')
 

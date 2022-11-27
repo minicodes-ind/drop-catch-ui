@@ -115,8 +115,8 @@
                                         1. Choose the share option of your favourite product <br>
                                         2. Choose copy link <br>
                                         3. Paste the link here and click Add Alert !
-                                     </p>
-                              </div>
+                                    </p>
+                                </div>
                                
                                 <div class="col-md-12">
                                     <label for="Product URL" class="form-label ">Enter URL Here</label>

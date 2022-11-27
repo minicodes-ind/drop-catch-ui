@@ -63,6 +63,7 @@ export default{
             this.$router.push('/signup');
          },
             login() {
+                window.scrollBy(0, -1500);
                 
                 if(this.loginModel.email ){
                     if(this.loginModel.password){
