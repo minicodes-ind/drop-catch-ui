@@ -167,7 +167,7 @@ export default {
                     Loading Alerts Please wait.
                 </template>
                 <Column v-for="headers of tableHeaders" :field="headers" style="text-align: center;
-                   font-size: medium;white-space: normal" :header="headers.replace('_', ' ').toUpperCase()" :key="headers"
+                   font-size: medium;white-space: pre-line" :header="headers.replace('_', ' ').toUpperCase()" :key="headers"
                     :sortable="true">  </Column>
                 <Column :exportable="false" class="cols">
                     <template #body="usersData">
@@ -237,7 +237,7 @@ export default {
 @media only screen and (max-width: 425px) {
     .container-fluid {
     margin-top: 130px;
-    padding: 10px 5px;
+    padding: 5px 6px;
 }
 .card {
     padding: 3px;
