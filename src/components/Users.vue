@@ -235,9 +235,13 @@ export default {
 
 
 @media only screen and (max-width: 425px) {
+    body{
+        width:424px;
+    }
     .container-fluid {
+    width:420px;
     margin-top: 130px;
-    padding: 5px 6px;
+    padding: 5px 8px;
 }
 .card {
     padding: 3px;
