@@ -40,12 +40,12 @@
                     mode: "cors",
                     headers: {
                         "Content-Type": "application/json",
-                        "Authorization": "bearer " + sessionStorage.getItem('token')
+                        "Authorization": "bearer " + localStorage.getItem('token')
                     },
                     body: JSON.stringify(
                         {
-                        name:sessionStorage.getItem('name'),
-                        email:sessionStorage.getItem('email'),
+                        name:localStorage.getItem('name'),
+                        email:localStorage.getItem('email'),
                         url:this.userModel.url,
                         }
                         )

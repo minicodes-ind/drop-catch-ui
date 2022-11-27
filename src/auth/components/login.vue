@@ -82,9 +82,9 @@ export default{
                         })
                         .then(response => response.json())
                         .then(response => {
-                            sessionStorage.setItem('token', response.Token)
-                            sessionStorage.setItem('email', response.email)
-                            sessionStorage.setItem('name', response.name)                           
+                            localStorage.setItem('token', response.Token)
+                            localStorage.setItem('email', response.email)
+                            localStorage.setItem('name', response.name)                           
                             this.$emit("loading", false);
                             if(response.Token){
                                 //this.$emit("show_alert", {message: "Login Success", type: "success"});

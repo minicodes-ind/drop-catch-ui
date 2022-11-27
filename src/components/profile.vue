@@ -7,11 +7,11 @@
    export default {
        data() {
            return {
-               name:sessionStorage.getItem('name').toUpperCase(),
-               email:sessionStorage.getItem('email').toUpperCase(),
+               name:localStorage.getItem('name').toUpperCase(),
+               email:localStorage.getItem('email').toUpperCase(),
                showPasswordBox: false,
                passwordModel: {
-                   email:sessionStorage.getItem('email'),
+                   email:localStorage.getItem('email'),
                    currentPassword: "",
                    password: ""
                }
@@ -21,7 +21,7 @@
        mounted() {
 
            this.passwordModel = {
-           email: sessionStorage.getItem('email'),
+           email: localStorage.getItem('email'),
            currentPassword: "",
            password: ""
        };
@@ -84,12 +84,12 @@
            confirmPosition(position) {
                 this.$confirm.require({
                     group: 'positionDialog',
-                    message: `Are you sure you want to Logout of ${sessionStorage.getItem('email').toUpperCase()}`,
+                    message: `Are you sure you want to Logout of ${localStorage.getItem('email').toUpperCase()}`,
                     header: 'Logout Confirmation',
                     icon: 'pi pi-info-circle',
                     position: position,
                     accept: () => {
-                            sessionStorage.clear()
+                            localStorage.clear()
                             this.$router.go()
                     },
                     reject: () => {

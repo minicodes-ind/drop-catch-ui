@@ -38,7 +38,7 @@
                     const min = 1111111; const max = 9999999
                     const otp = Math.ceil(Math.random() * (max - min))
                     const storedotp = otp*4343
-                    sessionStorage.setItem('address', storedotp)
+                    localStorage.setItem('address', storedotp)
                     this.$emit("loading", true);
                     this.isOtpSent=true;
 
@@ -87,10 +87,10 @@
     
              
         signup() {
-            
+
             window.scrollBy(0, -1500);
             if(this.onetimepass){
-                const otpgot = sessionStorage.getItem('address')
+                const otpgot = localStorage.getItem('address')
 
                 const processed = parseInt(otpgot) / 4343;
                 if(this.onetimepass==processed){
@@ -114,7 +114,7 @@
                             if(response.status==201){
                             this.$emit("show_alert", {message: response.message, type: "success"});
                             this.$router.push('/');
-                            sessionStorage.removeItem('address')}
+                            localStorage.removeItem('address')}
                             else{
                                 if(response.raw_response.code==11000){
                                     this.$emit("show_alert", {message: response.message, type: "error"});

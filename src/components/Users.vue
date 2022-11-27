@@ -34,14 +34,14 @@ export default {
     methods: {
         async getUsers() {
             this.$emit("loading", true);
-            fetch(`${this.API_URL}/api/alerts/get?email=${sessionStorage.getItem('email')}`,
+            fetch(`${this.API_URL}/api/alerts/get?email=${localStorage.getItem('email')}`,
                 {
                     method: "get",
                     mode: "cors",
                     headers: {
                         "Content-Type": "application/json",
 
-                        "Authorization": "bearer " + sessionStorage.getItem('token')
+                        "Authorization": "bearer " + localStorage.getItem('token')
                     },
 
                     body: JSON.stringify(this.userModel)
@@ -62,10 +62,10 @@ export default {
                     mode: "cors",
                     headers: {
                         "Content-Type": "application/json",
-                        "Authorization": "bearer " + sessionStorage.getItem('token')
+                        "Authorization": "bearer " + localStorage.getItem('token')
                     },
 
-                    body: JSON.stringify({ email: sessionStorage.getItem('email'), url: url })
+                    body: JSON.stringify({ email: localStorage.getItem('email'), url: url })
                 })
                 .then(this.$emit("show_alert", { message: "Alert Deleted Successfully", type: "info" }))
                 .then(this.getUsers());
