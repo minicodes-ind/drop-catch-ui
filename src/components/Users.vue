@@ -32,6 +32,9 @@ export default {
         }
     },
     methods: {
+        exportCSV() {
+            this.$refs.dt.exportCSV();
+        },
         async getUsers() {
             this.$emit("loading", true);
             fetch(`${this.API_URL}/api/alerts/get?email=${localStorage.getItem('email')}`,
@@ -135,8 +138,9 @@ export default {
                     </tr>
                 </table> -->
         <h2 style="text-align: center;">Alert List</h2>
+
         <div class="card">
-            <DataTable :value="usersData" :paginator="true" :rows="5"  responsiveLayout="stack"
+            <DataTable :value="usersData" :paginator="true" :rows="5"  ref="dt"  responsiveLayout="stack"
                 paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
                 :rowsPerPageOptions="[5, 10, 25]"
                 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} Users"
@@ -184,13 +188,40 @@ export default {
                 <column >
                 </column>
             </DataTable>
+                <div class="shareBox">
+                    <button label="Share Alert List" class=" share"
+                            @click="exportCSV($event)" title="Share Alert List">
+                            <i class="pi pi-external-link"></i>
+                            Share Alert List</button>
+                </div>
         </div>
     </div>
 
 </template>
 
 <style scoped>
+.shareBox{
+    width:auto;
+    margin:auto;
+}
+.share{
+    border:#782388;
+   background-image: linear-gradient(to right, #af2c77, #a4287a, #98257e,
+    #8a2481, #7c2483, #782388, #74238d, #6f2393, #75229d, #7b20a6, #811db0,
+     #871aba);    
+   border-radius: 10px;
+   width:auto;
+   margin: auto;
+   text-align: center;
+   margin-top: 10px;
+   padding: 10px;
+   color: white;
+}
+.shareBox :hover {
+    padding: 10.2px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
+}
 .boxforSearch {
     width: auto;
     margin: auto;
