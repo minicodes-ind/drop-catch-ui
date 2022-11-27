@@ -166,8 +166,8 @@ export default {
                     <img src="../../src/assets/searchAnim.gif">
                     Loading Alerts Please wait.
                 </template>
-                <Column v-for="headers of tableHeaders" :field="headers" style="text-align: center;
-                   font-size: small;" :header="headers.replace('_', ' ').replace('product name','ITEM').toUpperCase()" :key="headers"
+                <Column v-for="headers of tableHeaders" :field="headers" style="text-align: center;font-size: small;"
+                 :header="headers.replace('_', ' ').replace('product name','ITEM').toUpperCase()" :key="headers"
                     :sortable="true">  </Column>
                 <Column :exportable="false" class="cols">
                     <template #body="usersData">
