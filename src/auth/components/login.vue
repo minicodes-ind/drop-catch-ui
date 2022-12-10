@@ -63,9 +63,9 @@ export default {
             this.$router.push('/signup');
         },
         login() {
-            window.scrollBy(0, -1500);
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.loginModel.email)) {
 
-            if (this.loginModel.email) {
+                window.scrollBy(0, -1500);
                 if (this.loginModel.password) {
                     this.$emit("loading", true);
                     fetch(`${this.API_URL}/api/login/`, {
@@ -106,7 +106,7 @@ export default {
                 }
             }
             else {
-                this.$emit("show_alert", { message: "Enter a email", type: "info" });
+                this.$emit("show_alert", { message: "Enter a Valid email", type: "info" });
             }
         }
     },
@@ -119,36 +119,27 @@ export default {
     <body>
 
         <div class="welcomeBanner">
-
-
-
             <div class="logoBox">
                 <h1 class="projectTitle">
                     Meet Mr.Catch, who catches all your favourite price drops
-
                 </h1>
                 <div>
                     <img class="helloAnim" src="../../assets/welcome-hello.gif" />
                 </div>
-
                 <h3>Step 1: copy the link of your favourite product</h3>
                 <h3>Step 2: Give it to us</h3>
                 <h3>Step 3: And get notified whenever the price drops</h3>
                 <h2 class="yeah">Yeah, it's simple as that !</h2>
-
             </div>
         </div>
         <div class="cont">
             <div class="loginlogoBox">
                 <h1 class="projectTitle">Drop Catch</h1>
-
             </div>
-
             <div class="loginBox">
                 <h4 v-show="!forgotPassword">Login to continue</h4>
                 <span @click="back" v-show="forgotPassword" class="back"><i class="pi pi-arrow-circle-left"></i></span>
                 <h4 v-show="forgotPassword">Enter your Email to reset Password</h4>
-
                 <div class="p-grid p-fluid">
                     <div class="p-col-12 p-lg-4 box">
                         <div class="p-inputgroup">
@@ -156,7 +147,6 @@ export default {
                             <input class="tb" type="text" pInputText v-model="loginModel.email" placeholder="Email ID">
                         </div>
                     </div>
-
                     <div v-show="!forgotPassword" class="p-col-12 p-lg-4 box">
                         <div class="p-inputgroup">
                             <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
@@ -164,28 +154,20 @@ export default {
                                 placeholder="Password" @keyup.enter="login" />
                         </div>
                         <span @click="forgot" class="forgot">Forgot Password?</span>
-
                     </div>
-
                     <div v-show="!forgotPassword" class="loginbutton">
                         <Button @click="login" type="button" label="Login" class="    lb"></Button>
                     </div>
                     <div v-show="forgotPassword" class="loginbutton">
                         <Button @click="reset" type="button" label="Reset Password" class="     lb"></Button>
                     </div>
-
                     <p class="regMessage">Don't Have an account?
                         <router-link class="link" to="/signup">Register Now</router-link>
                     </p>
-
                 </div>
             </div>
-
-
         </div>
     </body>
-
-
 
     </html>
 </template>
@@ -362,21 +344,23 @@ h4 {
         min-height: 1000px;
         background-color: hwb(0 100% 0%);
     }
+
     h3 {
-    padding: 3px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 900;
-    font-size: larger;
-    text-align: left;
-    color: #6f2393;
-}
+        padding: 3px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 900;
+        font-size: larger;
+        text-align: left;
+        color: #6f2393;
+    }
+
     .yeah {
         position: relative;
         font-weight: 800;
         font-style: italic;
         color: #a4287a;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        
+
     }
 
     .cont {
