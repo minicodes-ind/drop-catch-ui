@@ -124,7 +124,7 @@ export default {
 
             <div class="logoBox">
                 <h1 class="projectTitle">
-                    Meet Mr.Catch, who cathes all your favourite price drops
+                    Meet Mr.Catch, who catches all your favourite price drops
 
                 </h1>
                 <div>
@@ -369,7 +369,6 @@ h4 {
     font-size: larger;
     text-align: left;
     color: #6f2393;
-    font-size: x-large;
 }
     .yeah {
         position: relative;
@@ -377,7 +376,7 @@ h4 {
         font-style: italic;
         color: #a4287a;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: xxx-large;
+        
     }
 
     .cont {
@@ -437,7 +436,7 @@ h4 {
 
     .cont {
 
-        margin: 55px 10px;
+        margin: 35px 10px;
         padding: 15px;
         border: 2px solid rgb(183, 187, 185);
         border-radius: 50px;
@@ -471,7 +470,7 @@ h4 {
         width: 390px;
         margin: auto;
         margin-bottom: 150px;
-        margin-top: 100px;
+        margin-top: 70px;
 
     }
 
