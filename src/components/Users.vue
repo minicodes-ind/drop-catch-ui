@@ -2,7 +2,7 @@
 import Header from './Header.vue';
 import ConfirmDialog from 'primevue/confirmdialog';
 import { FilterMatchMode, FilterOperator } from 'primevue/api';
-
+import exportFromJSON from "export-from-json";
 </script>
 <script>
 export default {
@@ -33,7 +33,12 @@ export default {
     },
     methods: {
         exportCSV() {
-            this.$refs.dt.exportCSV();
+            const data = this.usersData;
+            const file = localStorage.getItem('name').toLocaleUpperCase()+ "-" +Date.now() ;
+            const fileName = "DC-Alert-List-" + file;
+            const exportType = exportFromJSON.types.xls;
+
+            if (data) exportFromJSON({ data, fileName, exportType });
         },
         async getUsers() {
             this.$emit("loading", true);
