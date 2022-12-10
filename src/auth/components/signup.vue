@@ -167,7 +167,7 @@
     <div class="cont ">
         <div class="loginlogoBox">
             <h1 class="projectTitle">Drop Catch</h1>
-            <h1 class="orionbranding">DC&trade;</h1>
+          
            
         </div>
     
@@ -380,6 +380,52 @@ h4{
 
 .link{
     color: rgb(0, 217, 255);
+}
+@media only screen and (max-width: 2564px) {
+    body{
+      padding: 10px 120px;  
+      background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);    background-repeat: no-repeat;
+      min-height: 1000px;
+      background-color: hwb(0 100% 0%);
+    }
+.cont{  
+    height: 720px;
+    margin: 55px 10px;
+    padding: 55px;
+    border: 2px solid rgb(183, 187, 185);
+    border-radius: 50px;
+    width: auto;
+}
+.logoBox{
+    width: auto;
+    position: relative;
+    align-content: center;
+    height: 30px;
+    margin: auto;
+}
+.box{
+    margin-top: -12px;
+    width: auto;
+}
+.tb{
+    border:1px solid white;
+    width: 450px;
+    height: 50px;
+}
+.loginBox{
+    position: relative;
+    box-shadow: 0px 10px rgb(195, 199, 201);
+    padding: 50px;
+    border-radius:50px ;
+    width:590px;
+    margin: auto;
+    margin-bottom: 150px;
+    margin-top:110px;
+    height:510px
+
+}
+  
+
 }
 
 /* ___________________________________________------------------------___ */

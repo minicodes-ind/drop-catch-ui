@@ -58,22 +58,7 @@ export default {
  
     <div class="cont">
       <div v-if="spinner" class="row position-absolute top-50 end-50 show">
-        <div class="col">
-          <div class="spinner-grow text-info" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
-        <div class="col">
-          <div class="spinner-grow text-success" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
-        <div class="col">
-          <div class="spinner-grow text-warning" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          
-        </div>
+        <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </div>
 
       
@@ -111,13 +96,93 @@ export default {
     @data_added="handleDataAdd($event)" 
     @show_alert="handleShowAlert($event)"
     />
-   
-  <footer>
+    <footer>
     <footerBar />
   </footer>
+  
 </body>
+ 
 </template>
 <style scoped>
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  animation: lds-grid 1.2s linear infinite;
+}
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+@keyframes lds-grid {
+  0%, 100% {
+    opacity: 1;
+    background-color: blueviolet;
+  }
+  50% {
+    background-color: rgb(43, 137, 226);
+    opacity: 0.5;
+  }
+}
+.row{
+  position: relative;
+  margin-left: 20px;
+}
+/* .footer{
+  width:100%;
+  position: fixed;
+  bottom:0;
+  overflow:hidden;
+} */
   .carding{
     width:auto;
     margin: auto;
@@ -144,9 +209,26 @@ export default {
     background-color: rgb(255, 255, 255);
   }
   .show {
+  
     z-index: 90000000;
   }
-
+  @media only screen and (max-width: 4205px) {
+    .anim{
+    position: absolute;
+    width: auto;
+    margin: auto;
+    background-color: rgb(168, 164, 164);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 200px;
+  }
+  .outer{
+    position: absolute;
+    width: 700px;
+    margin: auto;
+    padding: 10px;
+  }
+}
   @media only screen and (max-width: 425px) {
     .anim{
     position: absolute;

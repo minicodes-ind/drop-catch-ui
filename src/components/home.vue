@@ -144,9 +144,9 @@ export default {
 
 
     </body>
-    <!-- <div class="ad-container">
+    <div class="ad-container">
         <Adsense ad-slot="9823128209" ad-format="auto"></Adsense>
-    </div> -->
+    </div>
 </template>
 
 
