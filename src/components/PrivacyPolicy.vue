@@ -112,7 +112,7 @@ head{
 margin: 10px;
 }
 .container{
-    padding: 100px; 
+    padding: 50px; 
     margin: 0px 0px 0px 0px
 }
 </style>

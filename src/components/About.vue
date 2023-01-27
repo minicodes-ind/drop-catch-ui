@@ -51,7 +51,7 @@ export default{
 
 <style scoped>
     .container{
-        padding: 80px;
+        padding: 50px;
     }
     a{
         cursor: pointer;

@@ -118,7 +118,7 @@ export default {
 @media only screen and (max-width: 425px) {
     .navbar {
         min-width: 425px;
-        height: 63px
+        height: 100px
     }
 }
 </style>

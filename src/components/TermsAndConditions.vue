@@ -145,7 +145,7 @@ export default{
 
 <style scoped>
     .container{
-        padding:70px;
+        padding:50px;
         margin: 5px;
     }
 </style>
