@@ -1,6 +1,16 @@
 <script>
 export default {
-
+    methods:{
+            privacyPolicy(){
+                this.$router.push('/privacy-policy')
+            },
+            termsAndConditions(){
+               this.$router.push('terms-and-conditions')
+            },
+            aboutUs(){
+                this.$router.push('/About-us')
+            }
+        },
 
 }
 </script>
@@ -14,9 +24,13 @@ export default {
                 </div> -->
                 <a class="copyrights">&nbsp;@COPYRIGHTS 2022&nbsp;</a>
                 <p class="footerText">
-                    <a class="footerText" href="https://sites.google.com/view/privacy-policy-drop-catch/home">&nbsp;
+                    <a class="footerText" @click="privacyPolicy()">&nbsp;
                         Privacy Policy&nbsp;</a>|
-                    <a class="footerText" href="mailto:dropcatchalerts@outlook.com">&nbsp;Conatct us&nbsp;</a>
+                    <a class="footerText" href="mailto:dropcatchalerts@outlook.com">&nbsp;Conatct us&nbsp;</a> |
+                    <a class="footerText" @click="termsAndConditions()">&nbsp;Terms and Conditions&nbsp;</a> |
+                    <a class="footerText" @click="aboutUs()">&nbsp;About Us&nbsp;</a>
+
+
                 </p>
 
             </div>
@@ -47,7 +61,7 @@ export default {
 }
 
 .footerText {
-
+    cursor: pointer;
     width: auto;
     margin: auto;
     text-decoration: none;

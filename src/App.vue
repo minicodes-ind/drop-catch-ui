@@ -7,7 +7,10 @@ import login from './auth/components/login.vue';
 import signup from './auth/components/signup.vue';
 import home from './components/home.vue';
 import profile from './components/profile.vue';
+import PrivacyPolicy from './components/PrivacyPolicy.vue';
 import footerBar from './components/footerBar.vue';
+import TermsAndConditions from './components/TermsAndConditions.vue';
+import About from './components/About.vue';
 </script>
 
 <script>
