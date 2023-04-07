@@ -26,10 +26,16 @@
                 if(
                     this.userModel.url.startsWith('https://amzn') ||
                     this.userModel.url.startsWith('https://www.flipkart.com') ||
+                    this.userModel.url.startsWith('https://dl.flipkart.com') ||
                     this.userModel.url.startsWith('https://www.myntra') 
                 ){
-                    if(this.userModel.url.includes('?')){
+                    if(this.userModel.url.includes('?')) {
                         this.userModel.url = this.userModel.url.substr(0, this.userModel.url.indexOf('?'))
+                    }
+                    if(this.userModel.url.includes(' ')) {
+                        const url = this.userModel.url.split(' ');
+                        this.userModel.url = url[0];
+                        console.log("EDITED URL " , this.userModel.url)
                     }
                     return true;
                 }
