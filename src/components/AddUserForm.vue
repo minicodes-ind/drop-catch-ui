@@ -90,9 +90,11 @@
                         this.$emit("data_added", data);
                         if(data.status==200 || data.status==201){
                             this.$emit("show_alert", {message: data.message, type: "success"});
+                            this.clear()
                         }
                         else{
                             this.$emit("show_alert", {message: data.message, type: "error"});
+                            this.clear()                
                         }
                         
                     })
@@ -103,6 +105,7 @@
                         this.$emit("show_alert", true);
                         this.$refs.closeButton.$el.click();
                         this.$emit("show_alert", {message: err, type: "error"});
+                        this.clear()
                     })
                 }
             
