@@ -46,16 +46,20 @@ export default {
             <div class="banner">
                 <img class="welcome-anim" src="../../src/assets/home-anim.gif" />
             </div>
-            <h1 style="text-align:center;">Add New Alerts</h1>
+            <!-- <h1 style="text-align:center;">A/dd New Alerts</h1> -->
 
 
-            <div class="card-group cDiv" style="width:auto;margin:auto;">
+            <div class="card-group cDiv" style="width:auto;margin:auto;margin-top:13px">
 
                 <div class="card" style="width: 18rem;text-align: center; 
     background-image: linear-gradient(to right , #e9efff, #eeefff, #f3effe, #f7effd, #fbeffb, #fad8fa, #fad8fa, #faf0fc, #f6f0fe, #f2f1ff, #edf1ff, #e9f2ff);    
-   color:white;border-radius:10px;margin-left:15px">
+   color:white;border-radius:10px;margin-left:24px; ">
                     <div class="card-body">
-                        <h4 class="card-title">Amazon</h4>
+                        <h4 class="card-title">Add New Product Alerts Here</h4>
+                        <h6>Supported Sites</h6>
+                        <p class="list">• Amazon</p>
+                        <p class="list">• Flipkart</p>
+                        <p class="list">• Myntra</p>
 
                     </div>
 
@@ -65,7 +69,7 @@ export default {
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem; color: blueviolet;text-align: center;    
+                <!-- <div class="card" style="width: 18rem; color: blueviolet;text-align: center;    
     background-image: linear-gradient(to right , #e9efff, #eeefff, #f3effe, #f7effd, #fbeffb, #fad8fa, #fad8fa, #faf0fc, #f6f0fe, #f2f1ff, #edf1ff, #e9f2ff);    
    color:white;border-radius:10px;margin-left:15px">
                     <div class="card-body">
@@ -76,8 +80,6 @@ export default {
                     <div class="card-footer">
                         <p style="color:blueviolet">comming soon</p>
 
-                        <!-- <Button  @click="alerts"  class=" p-button-raised p-button-rounded add"  label="Add New Alert"
-                     icon="pi pi-bell" iconPos="right"></Button>             -->
                     </div>
                 </div>
 
@@ -90,10 +92,8 @@ export default {
                     </div>
                     <div class="card-footer">
                         <p style="color:blueviolet">comming soon</p>
-                        <!-- <Button  @click="alerts"  class=" p-button-raised p-button-rounded add"  label="Add New Alert"
-                     icon="pi pi-bell" iconPos="right"></Button>             -->
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -188,6 +188,13 @@ p {
 
 h4 {
     color: #6f2393
+}
+h6{
+    color:  #6f2393
+}
+.list{
+    text-align: center;
+    color:  #6f2393
 }
 
 /* .card{

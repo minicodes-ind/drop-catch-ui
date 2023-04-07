@@ -22,6 +22,19 @@
         },
         emits: ["opened_modal", "spinner", "show_alert", "loading" , "addanim", "data_added"],
         methods: {
+            isUrlValid(){
+                if(
+                    this.userModel.url.startsWith('https://amzn') ||
+                    this.userModel.url.startsWith('https://www.flipkart.com') ||
+                    this.userModel.url.startsWith('https://www.myntra') 
+                ){
+                    if(this.userModel.url.includes('?')){
+                        this.userModel.url = this.userModel.url.substr(0, this.userModel.url.indexOf('?'))
+                    }
+                    return true;
+                }
+                return false;
+            },
 
             handleUserSubmit() {
                 const trimmedURL = this.userModel.url; 
@@ -30,50 +43,50 @@
                 
 
                 console.log("url 1",this.userModel.url)
-                if(this.userModel.url.startsWith('https://amzn')){
-                this.$refs.closeButton.$el.click();
-                this.$emit("addanim", true);
-                console.log("url 1",this.userModel.url)
+                if(this.isUrlValid()){
+                    this.$refs.closeButton.$el.click();
+                    this.$emit("addanim", true);
+                    console.log("url 1",this.userModel.url)
 
-                fetch(`${this.API_URL}/api/alerts/add`, {
-                    method: "POST",
-                    mode: "cors",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": "bearer " + localStorage.getItem('token')
-                    },
-                    body: JSON.stringify(
-                        {
-                        name:localStorage.getItem('name'),
-                        email:localStorage.getItem('email'),
-                        url:this.userModel.url,
+                    fetch(`${this.API_URL}/api/alerts/add`, {
+                        method: "POST",
+                        mode: "cors",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": "bearer " + localStorage.getItem('token')
+                        },
+                        body: JSON.stringify(
+                            {
+                            name:localStorage.getItem('name'),
+                            email:localStorage.getItem('email'),
+                            url:this.userModel.url,
+                            }
+                            )
+                        
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        this.$refs.closeButton.$el.click();
+
+                        this.$emit("addanim", false);
+                        this.$emit("data_added", data);
+                        if(data.status==200 || data.status==201){
+                            this.$emit("show_alert", {message: data.message, type: "success"});
                         }
-                        )
+                        else{
+                            this.$emit("show_alert", {message: data.message, type: "error"});
+                        }
+                        
+                    })
                     
-                })
-                .then(response => response.json())
-                .then(data => {
-                    this.$refs.closeButton.$el.click();
-
-                    this.$emit("addanim", false);
-                    this.$emit("data_added", data);
-                    if(data.status==200 || data.status==201){
-                        this.$emit("show_alert", {message: data.message, type: "success"});
-                    }
-                    else{
-                        this.$emit("show_alert", {message: data.message, type: "error"});
-                    }
-                    
-                })
-                
-                .catch(err => {
-                    console.log(err);
-                    this.$emit("addanim", false);
-                    this.$emit("show_alert", true);
-                    this.$refs.closeButton.$el.click();
-                    this.$emit("show_alert", {message: err, type: "error"});
-                })
-            }
+                    .catch(err => {
+                        console.log(err);
+                        this.$emit("addanim", false);
+                        this.$emit("show_alert", true);
+                        this.$refs.closeButton.$el.click();
+                        this.$emit("show_alert", {message: err, type: "error"});
+                    })
+                }
             
         else{
             this.$emit("show_alert", {message: "unsupported url", type: "error"});
@@ -120,7 +133,7 @@
                                
                                 <div class="col-md-12">
                                     <label for="Product URL" class="form-label ">Enter URL Here</label>
-                                    <input v-model="userModel.url" type="text" class="form-control linkbox" placeholder="Example: https://amzn.eu/d/11MN43s" id="Product URL">
+                                    <input v-model="userModel.url" type="text" class="form-control linkbox" placeholder="Example: https://anysite/d/11MN43s" id="Product URL">
                                 </div>
                                 <!-- <div class="col-md-12">
                                     <label for="Nick Name" class="form-label">Nick Name</label>
