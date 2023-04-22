@@ -39,15 +39,14 @@ export default {
             this.$emit("loading", true);
             fetch(`${this.API_URL}/api/alerts/get?email=${localStorage.getItem('email')}`,
                 {
-                    method: "get",
+                    method: "post",
                     mode: "cors",
                     headers: {
                         "Content-Type": "application/json",
 
                         "Authorization": "bearer " + localStorage.getItem('token')
                     },
-
-                    body: JSON.stringify(this.userModel)
+                    
                 })
                 .then(response => response.json())
                 .then(data => {
