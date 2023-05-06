@@ -16,7 +16,9 @@ import About from './components/About.vue';
 <script>
 export default {
   mounted(){
-   
+    setInterval(() => {
+  window.location.reload();
+}, 120000);
   },
   data() {
     return {
@@ -251,7 +253,7 @@ export default {
     margin-top: 120px;
   }
   body{
-    margin-right: 0px;
+    margin-right: -80px;
     background-color: rgb(255, 255, 255);
   }
   .outer{

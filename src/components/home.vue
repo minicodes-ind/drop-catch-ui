@@ -9,9 +9,7 @@ import Header from './Header.vue';
 export default {
 
     mounted() {  
-         setInterval(() => {
-  window.location.reload();
-}, 60000);
+        
         window.scrollBy(0, -1500);
     },
     methods: {
