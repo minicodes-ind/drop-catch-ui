@@ -198,7 +198,6 @@
 .helper-button{
     padding-right: 50px;
     margin: 3px;
- 
     height: 40px;
     width: 60px;
     text-align: center;
@@ -246,5 +245,12 @@
 .splbutton{
     width: auto;
     margin: auto;
+}
+@media only screen and (max-width: 468px) {
+    
+  .modal{
+    width: 468px;
+  }
+  
 }
 </style>
