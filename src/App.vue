@@ -242,7 +242,7 @@ export default {
     padding: 10px;
   }
 }
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 468px) {
     .anim{
     position: absolute;
     width: 370px;
@@ -253,7 +253,8 @@ export default {
     margin-top: 120px;
   }
   body{
-    margin-right: -80px;
+    width:468px;
+    margin-right: 0px;
     background-color: rgb(255, 255, 255);
   }
   .outer{
