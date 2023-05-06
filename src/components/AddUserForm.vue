@@ -246,11 +246,5 @@
     width: auto;
     margin: auto;
 }
-@media only screen and (max-width: 468px) {
-    
-  .modal{
-    width: 468px;
-  }
-  
-}
+
 </style>

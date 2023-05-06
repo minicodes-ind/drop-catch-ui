@@ -253,7 +253,6 @@ export default {
     margin-top: 120px;
   }
   body{
-    width:468px;
     margin-right: 0px;
     background-color: rgb(255, 255, 255);
   }
