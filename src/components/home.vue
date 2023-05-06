@@ -3,16 +3,15 @@
 
 
 import Header from './Header.vue';
-import Adsense from './Adsense.vue'
 </script>
 
 <script>
 export default {
-    components: {
-        Adsense
-    },
 
-    mounted() {
+    mounted() {  
+         setInterval(() => {
+  window.location.reload();
+}, 60000);
         window.scrollBy(0, -1500);
     },
     methods: {
@@ -24,6 +23,7 @@ export default {
     },
     emits: ["adduser_popover"]
 }
+
 </script>
 
 
@@ -33,20 +33,17 @@ export default {
     <header>
         <Header @adduser_popover="handlePopover($event)" />
     </header>
-
+   
+    <div>
+    <div id="adsterra"></div>
+</div>
     <body>
-        <div>
-
-
-        </div>
-
-
 
         <div class="mainContainer" style="text-align: center;">
             <div class="banner">
                 <img class="welcome-anim" src="../../src/assets/home-anim.gif" />
             </div>
-            <!-- <h1 style="text-align:center;">A/dd New Alerts</h1> -->
+          
 
 
             <div class="card-group cDiv" style="width:auto;margin:auto;margin-top:13px">
@@ -69,84 +66,17 @@ export default {
                     </div>
                 </div>
 
-                <!-- <div class="card" style="width: 18rem; color: blueviolet;text-align: center;    
-    background-image: linear-gradient(to right , #e9efff, #eeefff, #f3effe, #f7effd, #fbeffb, #fad8fa, #fad8fa, #faf0fc, #f6f0fe, #f2f1ff, #edf1ff, #e9f2ff);    
-   color:white;border-radius:10px;margin-left:15px">
-                    <div class="card-body">
-                        <h4 class="card-title">Flipkart</h4>
-
-                    </div>
-
-                    <div class="card-footer">
-                        <p style="color:blueviolet">comming soon</p>
-
-                    </div>
-                </div>
-
-                <div class="card" style="width: 18rem; text-align: center;
-    background-image: linear-gradient(to right , #e9efff, #eeefff, #f3effe, #f7effd, #fbeffb, #fad8fa, #fad8fa, #faf0fc, #f6f0fe, #f2f1ff, #edf1ff, #e9f2ff);    
-   color:white;border-radius:10px;margin-left:15px">
-                    <div class="card-body">
-                        <h4 class="card-title">Meesho</h4>
-
-                    </div>
-                    <div class="card-footer">
-                        <p style="color:blueviolet">comming soon</p>
-                    </div>
-                </div> -->
 
             </div>
 
 
-            <!-- <div class="card-group" style="margin-top:5px;">
- 
-    <div class="card" style="width: 18rem;background-color:blueviolet;color:white;border-radius:10px;">
-        <div class="card-body">
-            <h4 class="card-title">Total number of DB Developers</h4>
-
-            <p class="card-text">Total number of Database Developers in our company </p>
-            </div>
-
-            <div class="card-footer">
-            <h4 class="text">{{"FindTotalDatabase.length"}}</h4>
-            </div>
-    </div>
-    <div class="card" style="width: 18rem;background-color:blueviolet;color:white;border-radius:10px;margin-left:5px">
-        <div class="card-body">
-            <h4 class="card-title">Total number of SEOs</h4>
-
-            <p class="card-text">Total number of SEO specialists in our company </p>
-            </div>
-
-            <div class="card-footer">
-            <h4 class="text">{{"FindTotalDatabase.length"}}</h4>
-            </div>
-    </div>
-
- 
-
-   <div class="card" style="width: 18rem;background-color:blueviolet;color:white;border-radius:10px;margin-left:5px">
-    <div class="card-body">
-        <h4 class="card-title">Total SEO specialist</h4>
-        <p class="card-text">Total number of SEO specialists in our company.</p>
-    </div>
-
-        <div class="card-footer">
-            <h4 class="text">{{"FindTotalSEO.length"}}</h4>
-        </div>
-   </div>
-
-
-</div> -->
 
         </div>
 
 
 
     </body>
-    <div class="ad-container">
-        <Adsense ad-slot="9823128209" ad-format="auto"></Adsense>
-    </div>
+ 
 </template>
 
 

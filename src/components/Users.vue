@@ -39,7 +39,7 @@ export default {
             this.$emit("loading", true);
             fetch(`${this.API_URL}/api/alerts/get?email=${localStorage.getItem('email')}`,
                 {
-                    method: "post",
+                    method: "get",
                     mode: "cors",
                     headers: {
                         "Content-Type": "application/json",

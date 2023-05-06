@@ -15,6 +15,9 @@ import About from './components/About.vue';
 
 <script>
 export default {
+  mounted(){
+   
+  },
   data() {
     return {
       addanim:false,
@@ -209,6 +212,7 @@ export default {
   width:auto;
   }
   body{
+    margin-right: 160px;
     background-color: rgb(255, 255, 255);
   }
   .show {
@@ -224,6 +228,10 @@ export default {
     border-radius: 10px;
     padding: 10px;
     margin-top: 200px;
+  }
+  body{
+    margin-right: 160px;
+    background-color: rgb(255, 255, 255);
   }
   .outer{
     position: absolute;
@@ -241,6 +249,10 @@ export default {
     border-radius: 10px;
     padding: 10px;
     margin-top: 120px;
+  }
+  body{
+    margin-right: 0px;
+    background-color: rgb(255, 255, 255);
   }
   .outer{
     position: absolute;
