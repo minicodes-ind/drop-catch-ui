@@ -269,9 +269,9 @@ export default {
     margin: auto;
 }
 
-@media only screen and (max-width: 410px) {
+/* @media only screen and (max-width: 410px) {
     .modal {
-        width: 31112px;
+        width: 312px;
         font-weight: 700;
         color: #6f2393;
     }
@@ -284,5 +284,5 @@ export default {
         color: #6f2393;
     }
 
-}
+} */
 </style>
