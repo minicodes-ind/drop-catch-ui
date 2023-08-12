@@ -94,6 +94,13 @@ export default {
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        min-width: 920px;
+        height: 70px
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .navbar {
         min-width: 920px;

@@ -33,7 +33,7 @@ export default {
     </header>
    
     <div>
-    <div id="adsterra"></div>
+    <!-- <div id="adsterra"></div> -->
 </div>
     <body>
 

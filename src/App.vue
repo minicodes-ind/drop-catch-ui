@@ -18,7 +18,7 @@ export default {
   mounted(){
     setInterval(() => {
   window.location.reload();
-}, 120000);
+}, 1200000);
   },
   data() {
     return {
