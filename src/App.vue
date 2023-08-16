@@ -11,6 +11,7 @@ import PrivacyPolicy from './components/PrivacyPolicy.vue';
 import footerBar from './components/footerBar.vue';
 import TermsAndConditions from './components/TermsAndConditions.vue';
 import About from './components/About.vue';
+import BuyTickets from './components/BuyTickets.vue';
 </script>
 
 <script>

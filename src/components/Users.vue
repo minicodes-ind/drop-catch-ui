@@ -36,6 +36,7 @@ export default {
             this.$refs.dt.exportPDF();
         },
         async getUsers() {
+           try {
             this.$emit("loading", true);
             fetch(`${this.API_URL}/api/alerts/get?email=${localStorage.getItem('email')}`,
                 {
@@ -56,6 +57,9 @@ export default {
                     console.log("Users Data", this.usersData);
 
                 })
+            } catch(error){
+                this.$emit("loading", false);
+            }
         },
         deleteAlert(url) {
             fetch(`${this.API_URL}/api/alerts/delete`,
