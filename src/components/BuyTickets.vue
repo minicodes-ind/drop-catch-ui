@@ -7,7 +7,7 @@
         <h2>
             Hello Boss Choose Your Plan to buy tickets
         </h2>
-        <img class="helloAnim" src="../assets/grand hello (online-video-cutter.com) (1).gif">
+        <img class="helloAnim" src="../assets/helloanimation.gif">
         </div>
         
 
