@@ -6,7 +6,8 @@ import home from '../components/home.vue';
 import profile from '../components/profile.vue';
 import PrivacyPolicy from '../components/PrivacyPolicy.vue';
 import TermsAndConditions from '../components/TermsAndConditions.vue';
-import About from '../components/About.vue'
+import About from '../components/About.vue';
+import BuyTickets from '../components/BuyTickets.vue';
 export const routes = [
     { path: '/', component: login },
     { path: '/alert-list', component: Users },
@@ -15,9 +16,7 @@ export const routes = [
     { path: '/profile', component: profile },
     { path: '/privacy-policy', component: PrivacyPolicy},
     { path: '/terms-and-conditions', component: TermsAndConditions},
-    { path: '/About-us', component: About}
-
-
-
+    { path: '/About-us', component: About},
+    { path: '/BuyTickets', component: BuyTickets}
 
   ];
