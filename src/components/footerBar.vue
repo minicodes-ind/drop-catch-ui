@@ -1,15 +1,25 @@
 <script>
 export default {
     methods:{
-            privacyPolicy(){
+            privacyPolicy() {
                 this.$router.push('/privacy-policy')
             },
-            termsAndConditions(){
+            termsAndConditions() {
                this.$router.push('terms-and-conditions')
             },
-            aboutUs(){
-                this.$router.push('/About-us')
+            aboutUs() {
+                this.$router.push('/about-us')
+            },
+            shipping() {
+                this.$router.push('/shipping')
+            },
+            cancellationAndRefund() {
+                this.$router.push('/cancellation-and-refund')
+            },
+            contact() {
+                this.$router.push('/contact')
             }
+
         },
 
 }
@@ -26,9 +36,12 @@ export default {
                 <p class="footerText">
                     <a class="footerText" @click="privacyPolicy()">&nbsp;
                         Privacy Policy&nbsp;</a>|
-                    <a class="footerText" href="mailto:dropcatchalerts@outlook.com">&nbsp;Conatct us&nbsp;</a> |
+                    <a class="footerText" @click="contact()">&nbsp;Conatct us&nbsp;</a> |
                     <a class="footerText" @click="termsAndConditions()">&nbsp;Terms and Conditions&nbsp;</a> |
-                    <a class="footerText" @click="aboutUs()">&nbsp;About Us&nbsp;</a>
+                    <a class="footerText" @click="aboutUs()">&nbsp;About Us&nbsp;</a> |
+                    <a class="footerText" @click="shipping()">&nbsp;Shipping&nbsp;</a> |
+                    <a class="footerText" @click="cancellationAndRefund()">&nbsp;Cancellation And Refund&nbsp;</a>
+
 
 
                 </p>
