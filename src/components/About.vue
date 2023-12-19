@@ -37,10 +37,10 @@ export default{
     <p> 4. That's it you alert will be all set </p>
     <b> Note: </b>
     <p> Make sure you have selected the size of the product(if any) before copying the link for accurate alerts</p>
-    <!-- <b> Pricing </b>
-    <p> 1. Free for 5 products </p>
-    <p> 2. Rs.50 to unlock 5 plus </p>
-    <p> Go to profile to update you Account now <a @click="profile">My profile</a> </p> -->
+    <b> Pricing </b>
+    <p> 1. Free 5 Welcome tickets </p>
+    <p> 2. Explore Pricing to get more tickets </p>
+    <p> Go to profile to update you Account now <a @click="profile">My profile</a> </p>
   
 
     <b> How does it works? </b>

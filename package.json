@@ -13,6 +13,7 @@
     "primeicons": "^5.0.0",
     "primeng": "^14.1.0",
     "primevue": "^3.16.2",
+    "razorpay": "^2.9.2",
     "vue": "^3.2.37",
     "vue-router": "^4.1.5"
   },

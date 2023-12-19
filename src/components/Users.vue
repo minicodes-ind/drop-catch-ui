@@ -36,6 +36,7 @@ export default {
             this.$refs.dt.exportPDF();
         },
         async getUsers() {
+           try {
             this.$emit("loading", true);
             fetch(`${this.API_URL}/api/alerts/get?email=${localStorage.getItem('email')}`,
                 {
@@ -46,8 +47,7 @@ export default {
 
                         "Authorization": "bearer " + localStorage.getItem('token')
                     },
-
-                    body: JSON.stringify(this.userModel)
+                    
                 })
                 .then(response => response.json())
                 .then(data => {
@@ -57,6 +57,9 @@ export default {
                     console.log("Users Data", this.usersData);
 
                 })
+            } catch(error){
+                this.$emit("loading", false);
+            }
         },
         deleteAlert(url) {
             fetch(`${this.API_URL}/api/alerts/delete`,
@@ -264,7 +267,23 @@ export default {
     margin-top: 30px;
 }
 
+@media only screen and (max-width: 1024px) {
+    body{
+        width:1024px;
+    }
+    .container-fluid {
+    width:800px;
+    margin-top: 130px;
+    padding: 5px 12px;
+}
+.card {
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow:  1px 10px 10px 10px rgb(199, 194, 194);
+    background-color: rgb(199, 208, 218);
+}
 
+}
 @media only screen and (max-width: 425px) {
     body{
         width:424px;

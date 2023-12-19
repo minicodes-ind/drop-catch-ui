@@ -1,1 +1,50 @@
 @import "../../node_modules/primeflex/primeflex.css";
+
+@media (max-width: 768px) {
+    .topAdDesktop{
+      display: none; /* hide desktop ad container */
+    }
+    .sideAdDesktop{
+        position: fixed;
+        width: 200px;
+        top: 0; 
+        right: 0; 
+        height: 100%; 
+        background-image: linear-gradient(to left, #af2c77, #a4287a, #98257e,
+        #8a2481, #7c2483, #782388, #74238d, #6f2393, #75229d, #7b20a6, #811db0,
+         #871aba);    
+        padding: 10px;
+        display: none;
+    }
+    .topAdMobile {
+        min-width: 425px;
+      text-align: center;
+      background-image: linear-gradient(to right, #af2c77, #a4287a, #98257e,
+      #8a2481, #7c2483, #782388, #74238d, #6f2393, #75229d, #7b20a6, #811db0,
+       #871aba);  
+      display: block; /* show mobile ad container */
+    }
+}
+
+@media (min-width: 769px) {
+    .topAdDesktop {
+        text-align: center;
+      display: none; /* show desktop ad container */
+    }
+    .sideAdDesktop{
+        position: fixed;
+        width: 160px;
+        top: 0; 
+        right: 0; 
+        height: 100%; 
+        background-image: linear-gradient(to left, #af2c77, #a4287a, #98257e,
+     #8a2481, #7c2483, #782388, #74238d, #6f2393, #75229d, #7b20a6, #811db0,
+      #871aba);    
+        padding: 10px;
+        display: block;
+    }
+    .topAdMobile {
+        text-align: center;
+      display: none; /* hide mobile ad container */
+    }
+  }

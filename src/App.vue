@@ -11,10 +11,16 @@ import PrivacyPolicy from './components/PrivacyPolicy.vue';
 import footerBar from './components/footerBar.vue';
 import TermsAndConditions from './components/TermsAndConditions.vue';
 import About from './components/About.vue';
+import BuyTickets from './components/BuyTickets.vue';
 </script>
 
 <script>
 export default {
+  mounted(){
+    setInterval(() => {
+  window.location.reload();
+}, 1200000);
+  },
   data() {
     return {
       addanim:false,
@@ -209,6 +215,7 @@ export default {
   width:auto;
   }
   body{
+    margin-right: 160px;
     background-color: rgb(255, 255, 255);
   }
   .show {
@@ -225,6 +232,10 @@ export default {
     padding: 10px;
     margin-top: 200px;
   }
+  body{
+    margin-right: 160px;
+    background-color: rgb(255, 255, 255);
+  }
   .outer{
     position: absolute;
     width: 700px;
@@ -232,7 +243,7 @@ export default {
     padding: 10px;
   }
 }
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 468px) {
     .anim{
     position: absolute;
     width: 370px;
@@ -241,6 +252,10 @@ export default {
     border-radius: 10px;
     padding: 10px;
     margin-top: 120px;
+  }
+  body{
+    margin-right: 0px;
+    background-color: rgb(255, 255, 255);
   }
   .outer{
     position: absolute;
