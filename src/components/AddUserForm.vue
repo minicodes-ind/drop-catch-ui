@@ -230,7 +230,6 @@ export default {
 }
 
 .modal {
-
     font-weight: 700;
     color: #6f2393;
 }
@@ -241,7 +240,6 @@ export default {
 }
 
 .modal-body {
-
     background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
     background-repeat: no-repeat;
 
@@ -269,20 +267,23 @@ export default {
     margin: auto;
 }
 
-/* @media only screen and (max-width: 410px) {
-    .modal {
-        width: 312px;
-        font-weight: 700;
-        color: #6f2393;
-    }
-
+@media (max-width: 768px) {
+        .modal-dialog {
+            max-width: 100%;
+            margin: 0;
+        }
 }
-@media only screen and (max-width: 592px) {
-    .modal {
-        width: 500px;
-        font-weight: 700;
-        color: #6f2393;
-    }
 
-} */
+@media (max-width: 576px) {
+    .modal,
+    .modal-dialog,
+    .modal-body,
+    .modal-content,
+    .modal-header,
+    .modal-footer {
+        padding: 10px;
+        width: 100%;
+    }
+ 
+}
 </style>

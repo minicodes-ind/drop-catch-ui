@@ -113,13 +113,16 @@ export default {
 
 
     </div>
-    <AddUserForm :showModal="showPopup" 
+    <div>
+      <AddUserForm :showModal="showPopup" 
     @addanim="handleAddAnim($event)" 
     @opened_modal="showPopup = false" 
     @loading="handleLoading($event)"
     @data_added="handleDataAdd($event)" 
     @show_alert="handleShowAlert($event)"
     />
+    </div>
+    
     <div v-if="isVisible" class="scroll-to-top" @click="scrollToTop">
       <i class="fas fa-arrow-up">^</i>
     </div>
