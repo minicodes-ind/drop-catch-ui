@@ -3,7 +3,7 @@ import navbar from './components/navbar.vue';
 import Users from './components/Users.vue';
 import AddUserForm from './components/AddUserForm.vue';
 import Alert from './components/Alert.vue';
-import login from './auth/components/login.vue';
+import login from './auth/components/login.vue'; 
 import signup from './auth/components/signup.vue';
 import home from './components/home.vue';
 import profile from './components/profile.vue';
