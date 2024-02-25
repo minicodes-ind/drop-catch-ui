@@ -34,7 +34,7 @@
     color:white
 }
 .homeButton{
-    border-color: rgb(85, 14, 126);;
+    border-color: rgb(85, 14, 126);
     background-color: rgb(85, 14, 126);
 }
 .alertsButton{

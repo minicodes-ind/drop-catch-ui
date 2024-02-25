@@ -12,15 +12,15 @@ export default{
 
 <template>
 
-    <header>
+    <!-- <header>
         <Header @adduser_popover="handlePopover($event)" />
-    </header>
+    </header> -->
 
 
-    <div class="container">
-    <h2><strong>Terms and Conditions</strong></h2>
+    <div class="container fade-in-from-right">
+    <h1 class="title"><strong>Terms and Conditions</strong></h1>
 
-<p>Welcome to Dropcatch!</p>
+<h3><strong>Welcome to Dropcatch !</strong></h3>
 
 <p>These terms and conditions outline the rules and regulations for the use of Dropcatch's Website, located at www.mydropcatch.in.</p>
 
@@ -144,8 +144,28 @@ export default{
 </template>
 
 <style scoped>
+  .title {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
     .container{
         padding:50px;
         margin: 5px;
+    }
+    .fade-in-from-right {
+        opacity: 0;
+        animation: fadeInFromRight 1s forwards;
+    }
+
+    @keyframes fadeInFromRight {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 </style>

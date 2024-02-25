@@ -130,7 +130,7 @@ export default {
     <header>
         <Header @adduser_popover="handlePopover($event)" />
     </header>
-    <div class="container-fluid ">
+    <div class="container-fluid fade-in-from-right">
 
         <!-- <table v-if="showTable" class="text-center">
                     <th class="p-3" v-for="header of tableHeaders">{{header.replace("_", " ").toUpperCase()}}</th>
@@ -140,7 +140,7 @@ export default {
                         <td class="p-1"><button class="btn btn-danger">Delete</button></td>
                     </tr>
                 </table> -->
-        <h2 style="text-align: center;">Alert List</h2>
+        <h2 class="title">Alert List</h2>
 
         <div class="card">
             <DataTable :value="usersData" :paginator="true" :rows="5"  ref="dt"  responsiveLayout="stack"
@@ -207,6 +207,28 @@ export default {
     width:auto;
     margin:auto;
 }
+.fade-in-from-right {
+    opacity: 0;
+    animation: fadeInFromRight 1s forwards;
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.title {
+    text-align: center;   
+    margin-bottom: 30px;
+}
+
 .share{
     border:#782388;
    background-image: linear-gradient(to right, #af2c77, #a4287a, #98257e,

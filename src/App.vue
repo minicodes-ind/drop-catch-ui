@@ -17,12 +17,17 @@ import BuyTickets from './components/BuyTickets.vue';
 <script>
 export default {
   mounted(){
+    window.addEventListener("scroll", this.handleScroll);
     setInterval(() => {
   window.location.reload();
 }, 1200000);
   },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   data() {
     return {
+      isVisible: false,
       addanim:false,
       spinner: false,
       showPopup: false,
@@ -32,6 +37,16 @@ export default {
     }
   },
   methods: {
+    handleScroll() {
+      const threshold = 300; // Adjust as needed
+      this.isVisible = window.scrollY > threshold;
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    },
     handleLoading(event) {
       this.spinner = event;
     },
@@ -105,6 +120,9 @@ export default {
     @data_added="handleDataAdd($event)" 
     @show_alert="handleShowAlert($event)"
     />
+    <div v-if="isVisible" class="scroll-to-top" @click="scrollToTop">
+      <i class="fas fa-arrow-up">^</i>
+    </div>
     <footer>
     <footerBar />
   </footer>
@@ -113,6 +131,29 @@ export default {
  
 </template>
 <style scoped>
+.scroll-to-top {
+  position: fixed;
+  bottom: 70px;
+  right: 200px;
+  background-color: #380650;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-to-top:hover {
+  opacity: 0.8;
+}
+
+.fa-arrow-up {
+  font-size: 20px;
+}
 .lds-grid {
   display: inline-block;
   position: relative;

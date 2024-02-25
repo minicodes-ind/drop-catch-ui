@@ -127,55 +127,58 @@ export default {
     </header>
 
     <body>
+        <div class="container fade-in-from-right">
+            <div class="headerBox">
 
-        <div class="headerBox">
-
-            <div class="icoCont">
-                <img class="profile" src="../assets/profile.png" />
+                <div class="icoCont">
+                    <img class="profile" src="../assets/profile.png" />
+                </div>
+                <h2 class="title">My Profile </h2>
             </div>
-            <h2 class="title">My Profile </h2>
-        </div>
 
-        <div class="detailsBox">
-            <div class="textCont">
-                <h4>Name </h4>
-                <h2 class="detail">{{ name }}</h2>
-                <h4>Email</h4>
-                <h2 class="detail">{{ email }}</h2>
+            <div class="detailsBox">
+                <div class="textCont">
+                    <h4>Name </h4>
+                    <h2 class="detail">{{ name }}</h2>
+                    <h4>Email</h4>
+                    <h2 class="detail">{{ email }}</h2>
 
-                <h4>Tickets</h4>
-                <h2 class="detail">{{ email }}</h2>
-                <Button class="p-button change" label="Buy Tickets" @click="buyTickets()">Buy More Tickets</Button><br>
+    
+                    <!-- <h4>Tickets</h4>
+                    <h2 class="detail">{{ email }}</h2>
+                    <Button class="p-button change" label="Buy Tickets" @click="buyTickets()">Buy More Tickets</Button><br>
+            -->
+                
+                    <h4>Password </h4>
+                    <h1>*******</h1>
+                    <Button class="p-button change" label="change password" @click="change()">Change Password</Button><br>
+                    <Button @click="confirmPosition('bottom')" label="Logout" class="p-button change"></Button>
 
-                <h4>Password </h4>
-                <h1>*******</h1>
-                <Button class="p-button change" label="change password" @click="change()">Change Password</Button><br>
-                <Button @click="confirmPosition('bottom')" label="Logout" class="p-button change"></Button>
+                    <div class="passwordBox" v-show="showPasswordBox">
+                        <form>
+                            <div class="row">
 
-                <div class="passwordBox" v-show="showPasswordBox">
-                    <form>
-                        <div class="row">
-
-                            <div class="col-md-12 textDiv">
-                                <div class="p-inputgroup">
-                                    <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-                                    <Password :feedback="false" toggleMask pInputText class="tb"
-                                        v-model="passwordModel.currentPassword" placeholder="Enter Current Password" />
+                                <div class="col-md-12 textDiv">
+                                    <div class="p-inputgroup">
+                                        <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+                                        <Password :feedback="false" toggleMask pInputText class="tb"
+                                            v-model="passwordModel.currentPassword" placeholder="Enter Current Password" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12 textDiv">
-                                <div class="p-inputgroup">
-                                    <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-                                    <Password class="tb" pInputText v-model="passwordModel.password"
-                                        placeholder="Password" />
+                                <div class="col-md-12 textDiv">
+                                    <div class="p-inputgroup">
+                                        <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+                                        <Password class="tb" pInputText v-model="passwordModel.password"
+                                            placeholder="Password" />
+                                    </div>
                                 </div>
+                                <Button class="p-button submit" icon="pi pi-times" label="Cancel" @click="cancelReset"></Button>
+
+                                <Button class="p-button submit" icon="pi pi-check" label="Change" @click="submit"></Button>
                             </div>
-                            <Button class="p-button submit" icon="pi pi-times" label="Cancel" @click="cancelReset"></Button>
+                        </form>
 
-                            <Button class="p-button submit" icon="pi pi-check" label="Change" @click="submit"></Button>
-                        </div>
-                    </form>
-
+                    </div>
                 </div>
             </div>
         </div>
@@ -186,7 +189,32 @@ export default {
 .title {
     color: #380650;
 }
+.container {
+    padding: 50px;
+    margin: 0px 0px 0px 0px
+}
+.fade-in-from-right {
+    opacity: 0;
+    animation: fadeInFromRight 1s forwards;
+}
 
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
 .detailsBox {
 
     width: auto;
@@ -234,7 +262,7 @@ export default {
 }
 
 body {
-    margin-bottom: 250px;
+    margin-bottom: 50px;
     padding: 10px 30px;
 }
 

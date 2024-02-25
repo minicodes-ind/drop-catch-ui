@@ -8,13 +8,13 @@ import Header from './Header.vue';
 <script>
 export default {
 
-    mounted() {  
-        
+    mounted() {
+
         window.scrollBy(0, -1500);
     },
     methods: {
 
-        addAmazon() {
+        addAlert() {
             this.$emit('adduser_popover', true);
         },
 
@@ -27,22 +27,21 @@ export default {
 
 
 <template>
-
     <header>
         <Header @adduser_popover="handlePopover($event)" />
     </header>
-   
+
     <div>
-    <!-- <div id="adsterra"></div> -->
-</div>
+        <!-- <div id="adsterra"></div> -->
+    </div>
+
     <body>
 
-        <div class="mainContainer" style="text-align: center;">
+        <div class="mainContainer fade-in-from-right" style="text-align: center;">
+            
             <div class="banner">
                 <img class="welcome-anim" src="../../src/assets/home-anim.gif" />
             </div>
-          
-
 
             <div class="card-group cDiv" style="width:auto;margin:auto;margin-top:13px">
 
@@ -59,27 +58,42 @@ export default {
                     </div>
 
                     <div class="card-footer">
-                        <Button @click="addAmazon" class=" p-button-raised p-button-rounded add" label="Add New Alert"
+                        <Button @click="addAlert" class=" p-button-raised p-button-rounded add" label="Add New Alert"
                             icon="pi pi-bell" iconPos="right"></Button>
                     </div>
                 </div>
-
-
             </div>
-
-
-
+            
         </div>
-
-
-
     </body>
- 
 </template>
 
 
 
 <style  scoped>
+.fade-in-from-right {
+    opacity: 0;
+    animation: fadeInFromRight 1s forwards;
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
 .welcome-anim {
     width: auto;
     margin: auto;
@@ -117,12 +131,14 @@ p {
 h4 {
     color: #6f2393
 }
-h6{
-    color:  #6f2393
+
+h6 {
+    color: #6f2393
 }
-.list{
+
+.list {
     text-align: center;
-    color:  #6f2393
+    color: #6f2393
 }
 
 /* .card{
@@ -171,5 +187,6 @@ h6{
         margin-top: 110px;
 
     }
+
 }
 </style>
