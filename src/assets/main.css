@@ -27,13 +27,13 @@ body {
 
   .topAdMobile {
     max-width: 100%;
-    text-align: left; 
+    text-align: center; 
     display: block;
     /* show mobile ad container */
   }
   .bottomAdMobile {
     max-width: 100%;
-    text-align: left; 
+    text-align: center; 
     display: block;
     margin-bottom: 50px;
 

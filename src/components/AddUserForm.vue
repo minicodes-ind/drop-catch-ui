@@ -281,7 +281,7 @@ export default {
     .modal-content,
     .modal-header,
     .modal-footer {
-        padding: 10px;
+        padding: 2px;
         width: 100%;
     }
  
