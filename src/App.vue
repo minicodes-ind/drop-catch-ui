@@ -124,7 +124,7 @@ export default {
     </div>
     
     <div v-if="isVisible" class="scroll-to-top" @click="scrollToTop">
-      <i class="fas fa-arrow-up">^</i>
+      <i class="pi pi-angle-up"></i>
     </div>
     <footer>
     <footerBar />
@@ -137,7 +137,7 @@ export default {
 .scroll-to-top {
   position: fixed;
   bottom: 70px;
-  right: 200px;
+  right: 10%;
   background-color: #380650;
   color: #fff;
   width: 40px;

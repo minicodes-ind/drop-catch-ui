@@ -50,8 +50,7 @@ export default {
     .footer {
         position: fixed;
         bottom: 0;
-        left:-10px;
-        right: 100px;
+       left: -0px;
         width:100%;
         background-image: linear-gradient(to right, #af2c77, #a4287a, #98257e, #8a2481, #7c2483, #782388, #74238d, #6f2393, #75229d, #7b20a6, #811db0, #871aba);
         border-top: 1px solid #782388;
@@ -70,10 +69,12 @@ export default {
     .footerText:hover {
         color: #380342;
     }
+   
 
     @media only screen and (max-width: 425px) {
         .footer {
             height: 50px;
+            
         }
     }
 </style>

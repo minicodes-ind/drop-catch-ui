@@ -2,6 +2,7 @@
 
 /* global.css */
 body {
+  max-width: 100%;
   overflow: auto;
   font-family: 'Roboto', sans-serif;
   /* Change 'Roboto' to your desired font family */
@@ -9,6 +10,7 @@ body {
 
 @media (max-width: 768px) {
   .topAdDesktop {
+    max-width: 100%;
     display: none;
     /* hide desktop ad container */
   }
@@ -24,15 +26,16 @@ body {
   }
 
   .topAdMobile {
-    min-width: 425px;
-    text-align: center; 
+    max-width: 100%;
+    text-align: left; 
     display: block;
     /* show mobile ad container */
   }
   .bottomAdMobile {
-    min-width: 425px;
-    text-align: center; 
+    max-width: 100%;
+    text-align: left; 
     display: block;
+    margin-bottom: 50px;
 
   }
   .bottomAdDesktop {
