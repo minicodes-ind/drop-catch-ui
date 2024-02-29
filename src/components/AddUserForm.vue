@@ -133,7 +133,7 @@ export default {
             Launch demo modal
         </button>
 
-        <div id="addModal" class="modal" tabindex="-1">
+        <div id="addModal" class="modal modal-tansition" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -199,7 +199,22 @@ export default {
     padding: 2px;
     border-radius: 5px;
 }
+.modal-tansition {
+        opacity: 0;
+        animation: fadeInFromRight 1s forwards;
+    }
 
+    @keyframes fadeInFromRight {
+        0% {
+        opacity: 0;
+        transform: scale(0);
+        }
+
+        100% {
+        opacity: 1;
+        transform: scale(1);
+        }
+    }
 .helper-button-box {
     text-align: center;
     margin: 5px;
@@ -233,6 +248,7 @@ export default {
     font-weight: 700;
     color: #6f2393;
 }
+
 
 .modal-title {
     font-weight: 700;
