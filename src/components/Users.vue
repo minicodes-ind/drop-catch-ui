@@ -311,7 +311,7 @@ export default {
         width:424px;
     }
     .container-fluid {
-    width:420px;
+    max-width:100%;
     margin-top: 130px;
     padding: 5px 12px;
 }
