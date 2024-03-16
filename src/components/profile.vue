@@ -255,15 +255,16 @@ export default {
 }
 
 .detail {
-    font-size: larger;
+    font-size: medium;
     color: #6f2393;
     margin-top: 10px;
     text-align: center;
 }
 
 body {
+    width: 100%;
     margin-bottom: 50px;
-    padding: 10px 30px;
+  
 }
 
 .textDiv {
@@ -302,21 +303,15 @@ body {
 }
 
 @media only screen and (max-width: 425px) {
-    body {
-        width: 425px;
-    }
-
+    
     .headerBox {
         text-align: center;
-        width: auto;
-        margin: auto;
         margin-top: 120px;
     }
-
+  
     .textCont {
         text-align: center;
-        width: auto;
-        margin: auto;
+            }
+}
 
-    }
-}</style>
+</style>
