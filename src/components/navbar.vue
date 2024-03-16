@@ -23,6 +23,9 @@
                     <li class="nav-item">
                         <a class="nav-link" @click="privacyPolicy" :class="{ 'active': activeTab === 'privacy' }">PRIVACY POLICY</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" @click="cancellationAndRefund" :class="{ 'active': activeTab === 'cancellationAndRefund' }">CANCELLATION AND REFUND</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -56,6 +59,10 @@ export default {
         privacyPolicy() {
             this.activeTab = 'privacy';
             this.$router.push('/privacy-policy')
+        },
+        cancellationAndRefund() {
+            this.activeTab = 'cancellationAndRefund'
+            this.$router.push('/cancellation-and-refund')
         }
     }
 }

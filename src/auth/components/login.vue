@@ -174,6 +174,8 @@ export default {
     font-size: xx-large;
     color: rgb(119, 11, 133);
     box-shadow: #75229d;
+    width: 50%;
+    margin-left: 30px;
 }
 
 h3 {
@@ -183,12 +185,14 @@ h3 {
     font-size: larger;
     text-align: left;
     color: #6f2393;
+    margin-left: 30px;
 }
 
 .yeah {
     font-weight: 800;
     font-style: italic;
     color: #a4287a;
+    margin-left: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -545,6 +549,7 @@ h4 {
         font-size: large;
         text-align: center;
         color: #6f2393;
+        margin-left: 3px;
     }
    
 
@@ -631,10 +636,12 @@ h4 {
         font-size: large;
         text-align: center;
         color: #6f2393;
+        margin-left: 0px;
     }
 
     .yeah {
         font-size: x-large;
+        margin-left: 0px;
     }
 
     .welcomeBanner {
