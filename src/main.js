@@ -33,7 +33,7 @@ const router = VueRouter.createRouter({
 router.beforeEach(async (to, from) => {
     console.log(to.fullPath)
     const isAuth = await canAccess()
-    if(to.fullPath !== '/' && (to.fullPath !== '/signup' || to.fullPath !== '/about-us' || to.fullPath !== '/contact-us' || to.fullPath !== '/privacy-policy')){
+    if(to.fullPath !== '/' && to.fullPath !== '/signup' && to.fullPath !== '/about-us' && to.fullPath !== '/contact-us' && to.fullPath !== '/privacy-policy'){
         if (!isAuth) 
         {return '/'}
     }

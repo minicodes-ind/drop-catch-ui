@@ -267,22 +267,22 @@ h3 {
 }
 
 .helloAnim {
-    height: 300px
+    margin: auto;
+    height: 300px;
 }
 
 .welcomeBanner {
     position: absolute;
     float: left;
-    width: 400px;
+    width: 100%; /* Adjust width for responsiveness */
     margin-top: 50px;
 }
 
 body {
-    padding: 10px 120px;
-    background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
+    padding: 10px;
+    background-image: linear-gradient(to right top, #e9efff, #eeefff, #f3effe, #f7effd, #fbeffb, #fad8fa, #fad8fa, #faf0fc, #f6f0fe, #f2f1ff, #edf1ff, #e9f2ff);
     background-repeat: no-repeat;
-    min-height: 700px;
-    background-color: hwb(0 100% 0%);
+    min-height: 100vh; /* Adjust min-height for responsiveness */
 }
 
 .pi-arrow-circle-left {
@@ -325,10 +325,6 @@ body {
     margin-right: auto;
 }
 
-.orionbranding {
-    color: rgb(58, 57, 57);
-}
-
 .cont {
     position: relative;
     float: right;
@@ -339,11 +335,11 @@ body {
     border-radius: 50px;
     box-shadow: 0px 10px rgb(238, 200, 214);
     width: 500px;
-    height: 650px;
+    height: 550px;
 }
 
 h4 {
-    margin-top: 1px;
+    margin-top: 15px;
     margin-bottom: 25px;
     text-align: center;
     color: white;
@@ -373,7 +369,7 @@ h4 {
     margin-bottom: 10px;
     margin-top: 10px;
     /* margin-left: 540px; */
-    height: 520px
+    height: 390px
 }
 
 .loginbutton {
@@ -396,7 +392,8 @@ h4 {
 
 
 .regMessage {
-    margin-top: 15px;
+    margin-top: -5px;
+    padding-bottom: 30px;
     color: rgb(219, 219, 219);
     text-align: center;
 }
@@ -405,7 +402,9 @@ h4 {
     color: rgb(0, 217, 255);
 }
 
-@media only screen and (max-width: 2564px) {
+
+/* --------------------------------------------------------------- 3564px ----------------- */
+@media only screen and (max-width: 3564px) {
     body {
         padding: 10px 120px;
         background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
@@ -414,8 +413,26 @@ h4 {
         background-color: hwb(0 100% 0%);
     }
 
+    h3 {
+        padding: 3px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 900;
+        font-size: larger;
+        text-align: left;
+        color: #6f2393;
+    }
+
+    .yeah {
+        position: relative;
+        font-weight: 800;
+        font-style: italic;
+        color: #a4287a;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+
     .cont {
-        height: 720px;
+        height: 650px;
         margin: 55px 10px;
         padding: 55px;
         border: 2px solid rgb(183, 187, 185);
@@ -451,15 +468,23 @@ h4 {
         margin: auto;
         margin-bottom: 150px;
         margin-top: 110px;
-        height: 510px
+        height: 450px
     }
 
 
 }
 
+
 /* ___________________________________________------------------------___ */
 
 @media only screen and (max-width: 1440px) {
+    body {
+        padding: 10px 120px;
+        background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
+        background-repeat: no-repeat;
+        min-height: 900px;
+        background-color: hwb(0 100% 0%);
+    }
 
     .cont {
 
@@ -543,91 +568,7 @@ h4 {
         border-radius: 50px;
         box-shadow: 0px 10px rgb(197, 207, 207);
         width: auto;
-
-    }
-
-    .logoBox {
-        float: none;
-        width: auto;
-        text-align: center;
-        margin-top: 10px;
-        position: relative;
-        margin-left: 0px;
-    }
-
-    .box {
-        margin-top: 10px;
-        width: auto;
-    }
-
-    .tb {
-        border: 1px solid white;
-        width: 610px;
-        height: 60px;
-    }
-
-    .loginBox {
-        position: relative;
-        box-shadow: 0px 10px rgb(195, 199, 201);
-        padding: 50px;
-        border-radius: 50px;
-        width: 560px;
-        height: 650px;
-        margin: auto;
-        margin-bottom: 75px;
-        margin-top: 120px;
-
-    }
-
-    h2 {
-        font-size: small;
-    }
-
-    .loginbutton {
-        height: 70px;
-    }
-
-    .regMessage {
-        font-size: small;
-    }
-}
-
-/* ===================================================================768============= */
-
-@media only screen and (max-width: 768px) {
-    h3 {
-        background-color: rgb(236, 232, 232);
-        border-radius: 10px;
-        font-size: large;
-        text-align: center;
-        color: #6f2393;
-    }
-
-    .welcomeBanner {
-        margin-bottom: 500px;
-        position: relative;
-        float: left;
-        width: 690px;
-        margin-top: 50px;
-    }
-
-    body {
-        padding: 10px 150px;
-        background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
-        background-repeat: no-repeat;
-        width: 920px;
-        background-color: hwb(0 100% 0%);
-    }
-
-    .cont {
-        position: relative;
-        float: left;
-        padding: 50px;
-        border: 2px solid rgb(183, 187, 185);
-        border-radius: 50px;
-        box-shadow: 0px 10px rgb(197, 207, 207);
-        width: auto;
-
+        height: auto;
     }
 
     .logoBox {
@@ -659,7 +600,89 @@ h4 {
         height: 490px;
         margin: auto;
         margin-bottom: 75px;
-        margin-top: 110px;
+        margin-top: 90px;
+
+    }
+
+    h2 {
+        font-size: small;
+    }
+
+    .loginbutton {
+        height: 70px;
+    }
+
+    .regMessage {
+        font-size: small;
+    }
+}
+
+/* ===================================================================768============= */
+
+@media only screen and (max-width: 768px) {
+    h3 {
+        background-color: rgb(236, 232, 232);
+        border-radius: 10px;
+        font-size: large;
+        text-align: center;
+        color: #6f2393;
+    }
+   
+
+.welcomeBanner {
+        width: auto;
+        margin-top: 0;
+    }
+
+    body {
+        padding: 10px 150px;
+        background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
+        background-repeat: no-repeat;
+        width: 920px;
+        background-color: hwb(0 100% 0%);
+    }
+
+    .cont {
+        position: relative;
+        float: left;
+        padding: 50px;
+        border: 2px solid rgb(183, 187, 185);
+        border-radius: 50px;
+        box-shadow: 0px 10px rgb(197, 207, 207);
+        width: auto;
+        height: auto;
+    }
+
+    .logoBox {
+        float: none;
+        width: auto;
+        text-align: center;
+        margin-top: 10px;
+        position: relative;
+        margin-left: 0px;
+    }
+
+    .box {
+        margin-top: 10px;
+        width: auto;
+    }
+
+    .tb {
+        border: 1px solid white;
+        width: 610px;
+        height: 60px;
+    }
+
+    .loginBox {
+        position: relative;
+        box-shadow: 0px 10px rgb(195, 199, 201);
+        padding: 50px;
+        border-radius: 50px;
+        width: 560px;
+        height: 450px;
+        margin: auto;
+        margin-bottom: 75px;
+        margin-top: 90px;
 
     }
 
@@ -713,15 +736,8 @@ h4 {
     }
 
     .cont {
-        position: relative;
-        float: left;
-        padding: 10px;
-
-        border: 2px solid rgb(183, 187, 185);
-        border-radius: 50px;
-        box-shadow: 0px 10px rgb(197, 207, 207);
-        width: 400px;
-        height: 630px;
+        padding: 20px;
+        width: auto;
     }
 
     .logoBox {
@@ -741,23 +757,14 @@ h4 {
     }
 
     .tb {
-        border: 1px solid white;
-        width: 280px;
-        height: 39px;
+        height: 50px;
+        width: 100%; /* Adjust width for responsiveness */
     }
 
     .loginBox {
-        position: relative;
-        box-shadow: 0px 10px rgb(195, 199, 201);
-        padding: 20px;
-        border-radius: 50px;
-        width: 360px;
-        height: 450px;
+        width: 100%; /* Adjust width for responsiveness */
         margin: auto;
-        margin-bottom: 75px;
-        margin-top: 90px;
-
-
+        padding: 30px;
     }
 
     h2 {
@@ -765,7 +772,7 @@ h4 {
     }
 
     .loginbutton {
-        height: 70px;
+        height: 80px;
     }
 
     .regMessage {
@@ -773,13 +780,13 @@ h4 {
     }
 
     .projectTitle {
-
         text-align: center;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: 800;
         font-size: x-large;
         color: rgb(119, 11, 133);
         box-shadow: #75229d;
+        visibility: hidden;
     }
 }
 </style>

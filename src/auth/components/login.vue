@@ -113,11 +113,7 @@ export default {
 }
 </script>
 <template>
-
-    <html>
-
-    <body>
-
+    <div class="welcome-container">
         <div class="welcomeBanner">
             <div class="logoBox">
                 <h1 class="projectTitle">
@@ -156,10 +152,10 @@ export default {
                         <span @click="forgot" class="forgot">Forgot Password?</span>
                     </div>
                     <div v-show="!forgotPassword" class="loginbutton">
-                        <Button @click="login" type="button" label="Login" class="    lb"></Button>
+                        <Button @click="login" type="button" label="Login" class="lb"></Button>
                     </div>
                     <div v-show="forgotPassword" class="loginbutton">
-                        <Button @click="reset" type="button" label="Reset Password" class="     lb"></Button>
+                        <Button @click="reset" type="button" label="Reset Password" class="lb"></Button>
                     </div>
                     <p class="regMessage">Don't Have an account?
                         <router-link class="link" to="/signup">Register Now</router-link>
@@ -167,9 +163,7 @@ export default {
                 </div>
             </div>
         </div>
-    </body>
-
-    </html>
+    </div>
 </template>
 
 
@@ -200,22 +194,21 @@ h3 {
 
 .helloAnim {
     margin: auto;
-    height: 300px
+    height: 300px;
 }
 
 .welcomeBanner {
     position: absolute;
     float: left;
-    width: 400px;
+    width: 100%; /* Adjust width for responsiveness */
     margin-top: 50px;
 }
 
 body {
-    padding: 10px 120px;
+    padding: 10px;
     background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
     background-repeat: no-repeat;
-    min-height: 700px;
-    background-color: hwb(0 100% 0%);
+    min-height: 100vh; /* Adjust min-height for responsiveness */
 }
 
 .pi-arrow-circle-left {
@@ -239,13 +232,12 @@ body {
 }
 
 .logoBox {
-    width: auto;
+    width: 90%;
     position: absolute;
     align-content: flex-start;
     height: 20px;
     margin-top: 10px;
     margin-left: auto;
-    margin-right: auto;
 }
 
 .loginlogoBox {
@@ -255,7 +247,6 @@ body {
     height: 20px;
     margin-top: 10px;
     margin-left: auto;
-    margin-right: auto;
 }
 
 .cont {
@@ -325,7 +316,7 @@ h4 {
 
 
 .regMessage {
-    margin-top: 15px;
+    margin-top: 85px;
     color: rgb(219, 219, 219);
     text-align: center;
 }
@@ -373,7 +364,6 @@ h4 {
     }
 
     .logoBox {
-        width: auto;
         position: relative;
         align-content: center;
         height: 30px;
@@ -428,7 +418,6 @@ h4 {
     }
 
     .logoBox {
-        width: auto;
         position: relative;
         align-content: center;
         height: 20px;
@@ -505,7 +494,6 @@ h4 {
 
     .logoBox {
         float: none;
-        width: auto;
         text-align: center;
         margin-top: 10px;
         position: relative;
@@ -559,27 +547,25 @@ h4 {
         text-align: center;
         color: #6f2393;
     }
+   
 
-    .welcomeBanner {
-        margin-bottom: 500px;
-        position: relative;
-        float: left;
-        width: 690px;
-        margin-top: 50px;
+.welcomeBanner {
+        width: auto;
+        margin-top: 0;
     }
 
     body {
         padding: 10px 150px;
         background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
         background-repeat: no-repeat;
-        width: 920px;
+        width: 100%;
         background-color: hwb(0 100% 0%);
     }
 
     .cont {
         position: relative;
         float: left;
-        padding: 50px;
+        padding: 5px;
         border: 2px solid rgb(183, 187, 185);
         border-radius: 50px;
         box-shadow: 0px 10px rgb(197, 207, 207);
@@ -589,7 +575,6 @@ h4 {
 
     .logoBox {
         float: none;
-        width: auto;
         text-align: center;
         margin-top: 10px;
         position: relative;
@@ -612,9 +597,8 @@ h4 {
         box-shadow: 0px 10px rgb(195, 199, 201);
         padding: 50px;
         border-radius: 50px;
-        width: 560px;
-        height: 450px;
-        margin: auto;
+        width: 90%;
+        height: 90%;
         margin-bottom: 75px;
         margin-top: 90px;
 
@@ -662,28 +646,20 @@ h4 {
     }
 
     body {
-        padding: 100px 0px;
+        padding: 0px;
         background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
         background-repeat: no-repeat;
-        width: 425px;
+        width: 100%;
         background-color: hwb(0 100% 0%);
     }
 
     .cont {
-        position: relative;
-        float: left;
-        padding: 10px;
-
-        border: 2px solid rgb(183, 187, 185);
-        border-radius: 50px;
-        box-shadow: 0px 10px rgb(197, 207, 207);
-        width: 400px;
-        height: 600px;
+        padding: 20px;
+        width: auto;
     }
 
     .logoBox {
         float: none;
-        width: 420px;
         text-align: center;
         margin-top: 10px;
         position: relative;
@@ -698,22 +674,14 @@ h4 {
     }
 
     .tb {
-        border: 1px solid white;
-        width: 280px;
-        height: 39px;
+        height: 50px;
+        width: 100%; /* Adjust width for responsiveness */
     }
 
     .loginBox {
-        position: relative;
-        box-shadow: 0px 10px rgb(195, 199, 201);
-        padding: 20px;
-        border-radius: 50px;
-        width: 360px;
-        height: 350px;
-        margin-bottom: 75px;
-        margin-top: 90px;
-
-
+        width: 100%; /* Adjust width for responsiveness */
+        margin: auto;
+        padding: 30px;
     }
 
     h2 {
@@ -721,7 +689,7 @@ h4 {
     }
 
     .loginbutton {
-        height: 70px;
+        height: 50px;
     }
 
     .regMessage {
@@ -735,6 +703,7 @@ h4 {
         font-size: x-large;
         color: rgb(119, 11, 133);
         box-shadow: #75229d;
+        visibility: hidden;
     }
 }
 </style>
