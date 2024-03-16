@@ -29,21 +29,25 @@ const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
     routes,
 })
+router.beforeEach(async (to, from, next) => {
+    console.log(to.fullPath);
+    const isAuth = await canAccess();
+    console.log(isAuth);
 
-router.beforeEach(async (to, from) => {
-    console.log(to.fullPath)
-    const isAuth = await canAccess()
-    if(to.fullPath !== '/' && to.fullPath !== '/signup' && to.fullPath !== '/about-us' && to.fullPath !== '/contact-us' && to.fullPath !== '/privacy-policy'){
-        if (!isAuth) 
-        {return '/'}
-    }
-    else{
-        if (isAuth) {
-            return 'home'    
+    if (!isAuth) {
+        if (
+            to.fullPath !== '/signup' && to.fullPath !== '/about-us' 
+            && to.fullPath !== '/contact' && to.fullPath !== '/privacy-policy'
+            && to.fullPath !== '/terms-and-conditions' && to.fullPath !== '/'
+        ) {
+            next('/');
+        } else {
+            next();
         }
+    } else {
+        next();
     }
-    
-  })
+});
 
 const app = createApp(App);
 app

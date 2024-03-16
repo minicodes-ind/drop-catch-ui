@@ -272,7 +272,7 @@ export default {
 .container-fluid {
     width: 100%;
     margin-top: 130px;
-    padding: 10px 100px;
+    padding: 10px;
 }
 
 .cols {
@@ -298,7 +298,7 @@ export default {
     .container-fluid {
     width: 100%;
     margin-top: 130px;
-    padding: 5px 5px;
+    padding: 1px;
 }
 .card {
     padding: 3px;
@@ -316,7 +316,8 @@ export default {
     .container-fluid {
         width:100%;
         margin-top: 130px;
-        padding: 5px 5px;   }
+        padding: 1px ;   
+    }
 .card {
     width:100%;
     padding: 3px;

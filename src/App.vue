@@ -1,7 +1,7 @@
 <script setup>
 import navbar from './components/navbar.vue';
-import Users from './components/Users.vue';
-import AddUserForm from './components/AddUserForm.vue';
+import AlertList from './components/AlertList.vue';
+import AddAlertForm from './components/AddAlertForm.vue';
 import Alert from './components/Alert.vue';
 import login from './auth/components/login.vue';
 import signup from './auth/components/signup.vue';
@@ -114,7 +114,7 @@ export default {
 
     </div>
     <div>
-      <AddUserForm :showModal="showPopup" 
+      <AddAlertForm :showModal="showPopup" 
     @addanim="handleAddAnim($event)" 
     @opened_modal="showPopup = false" 
     @loading="handleLoading($event)"
@@ -308,4 +308,4 @@ export default {
     padding: 10px;
   }
 }
-</style>
+</style>./components/AlertList.vue./components/AddAlertForm.vue
