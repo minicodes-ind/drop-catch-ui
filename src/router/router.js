@@ -26,7 +26,4 @@ export const routes = [
     { path: '/shipping', component: shipping},
     { path: '/contact', component: contact}
 
-
-
-
   ];

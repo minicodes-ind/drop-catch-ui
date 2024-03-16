@@ -151,9 +151,6 @@ export default {
 }
 </script>
 <template>
-    <html>
-
-    <body>
         <div class="welcomeBanner">
             <div class="logoBox">
                 <h1 class="projectTitle">
@@ -167,7 +164,7 @@ export default {
                 <h3>Step 1: copy the link of your favourite product</h3>
                 <h3>Step 2: Give it to us</h3>
                 <h3>Step 3: And get notified whenever the price drops</h3>
-                <h2 class="yeah">Yeah, it's simple as that !</h2>
+                <h2 class="yeah">Yeah, it's as simple as that !</h2>
 
             </div>
         </div>
@@ -235,9 +232,6 @@ export default {
                 </div>
             </div>
         </div>
-    </body>
-
-    </html>
 </template>
     
  
@@ -282,7 +276,9 @@ body {
     padding: 10px;
     background-image: linear-gradient(to right top, #e9efff, #eeefff, #f3effe, #f7effd, #fbeffb, #fad8fa, #fad8fa, #faf0fc, #f6f0fe, #f2f1ff, #edf1ff, #e9f2ff);
     background-repeat: no-repeat;
-    min-height: 100vh; /* Adjust min-height for responsiveness */
+    min-height: 100vh;
+    max-width: 100%; /* Add this line */
+ /* Adjust min-height for responsiveness */
 }
 
 .pi-arrow-circle-left {
@@ -306,13 +302,12 @@ body {
 }
 
 .logoBox {
-    width: auto;
+    width: 100%;
     position: absolute;
     align-content: flex-start;
     height: 20px;
     margin-top: 10px;
     margin-left: auto;
-    margin-right: auto;
 }
 
 .loginlogoBox {
@@ -322,7 +317,6 @@ body {
     height: 20px;
     margin-top: 10px;
     margin-left: auto;
-    margin-right: auto;
 }
 
 .cont {
@@ -392,8 +386,7 @@ h4 {
 
 
 .regMessage {
-    margin-top: -5px;
-    padding-bottom: 30px;
+    margin-top: 15px;
     color: rgb(219, 219, 219);
     text-align: center;
 }
@@ -441,7 +434,6 @@ h4 {
     }
 
     .logoBox {
-        width: auto;
         position: relative;
         align-content: center;
         height: 30px;
@@ -496,7 +488,6 @@ h4 {
     }
 
     .logoBox {
-        width: auto;
         position: relative;
         align-content: center;
         height: 20px;
@@ -573,7 +564,6 @@ h4 {
 
     .logoBox {
         float: none;
-        width: auto;
         text-align: center;
         margin-top: 10px;
         position: relative;
@@ -638,11 +628,14 @@ h4 {
         padding: 10px 150px;
         background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
         background-repeat: no-repeat;
-        width: 920px;
+        max-width: 100%;
+        overflow-x: hidden; /* Add this line */
+
         background-color: hwb(0 100% 0%);
     }
 
     .cont {
+        margin-top: 80px;
         position: relative;
         float: left;
         padding: 50px;
@@ -655,7 +648,6 @@ h4 {
 
     .logoBox {
         float: none;
-        width: auto;
         text-align: center;
         margin-top: 10px;
         position: relative;
@@ -678,9 +670,8 @@ h4 {
         box-shadow: 0px 10px rgb(195, 199, 201);
         padding: 50px;
         border-radius: 50px;
-        width: 560px;
-        height: 450px;
-        margin: auto;
+        width: 90%;
+        height: 90%;
         margin-bottom: 75px;
         margin-top: 90px;
 
@@ -716,23 +707,22 @@ h4 {
     }
 
     .yeah {
-        font-size: xx-large;
+        font-size: x-large;
     }
 
     .welcomeBanner {
         margin-bottom: 500px;
         position: relative;
         float: left;
-        width: 420px;
         margin-top: 50px;
     }
 
     body {
-        padding: 100px 0px;
+        padding: 0px;
         background-image: linear-gradient(to left, #deabf5, #e4adf1, #e9b0ed, #edb3ea, #f1b6e7, #f4b1e8, #f8ace8, #fba7e8, #fd98ec, #fe89f2, #fe79f8, #fc68ff);
         background-repeat: no-repeat;
-        width: 425px;
-        background-color: hwb(0 100% 0%);
+        max-width: 100%;
+        overflow-x: hidden; /* Add this line */        background-color: hwb(0 100% 0%);
     }
 
     .cont {
@@ -742,7 +732,6 @@ h4 {
 
     .logoBox {
         float: none;
-        width: 420px;
         text-align: center;
         margin-top: 10px;
         position: relative;
@@ -772,7 +761,7 @@ h4 {
     }
 
     .loginbutton {
-        height: 80px;
+        height: 50px;
     }
 
     .regMessage {

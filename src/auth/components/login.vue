@@ -125,7 +125,7 @@ export default {
                 <h3>Step 1: copy the link of your favourite product</h3>
                 <h3>Step 2: Give it to us</h3>
                 <h3>Step 3: And get notified whenever the price drops</h3>
-                <h2 class="yeah">Yeah, it's simple as that !</h2>
+                <h2 class="yeah">Yeah, it's as simple as that !</h2>
             </div>
         </div>
         <div class="cont">
@@ -232,7 +232,7 @@ body {
 }
 
 .logoBox {
-    width: 90%;
+    width: 100%;
     position: absolute;
     align-content: flex-start;
     height: 20px;
@@ -316,7 +316,7 @@ h4 {
 
 
 .regMessage {
-    margin-top: 85px;
+    margin-top: 45px;
     color: rgb(219, 219, 219);
     text-align: center;
 }
@@ -469,7 +469,6 @@ h4 {
         margin-bottom: 500px;
         position: relative;
         float: left;
-        width: 690px;
         margin-top: 50px;
     }
 
@@ -563,9 +562,10 @@ h4 {
     }
 
     .cont {
+        margin-top: 80px;
         position: relative;
         float: left;
-        padding: 5px;
+        padding: 50px;
         border: 2px solid rgb(183, 187, 185);
         border-radius: 50px;
         box-shadow: 0px 10px rgb(197, 207, 207);
@@ -634,14 +634,13 @@ h4 {
     }
 
     .yeah {
-        font-size: xx-large;
+        font-size: x-large;
     }
 
     .welcomeBanner {
         margin-bottom: 500px;
         position: relative;
         float: left;
-        width: 420px;
         margin-top: 50px;
     }
 
