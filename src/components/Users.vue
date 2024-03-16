@@ -270,6 +270,7 @@ export default {
     padding:1px 1px;
 }
 .container-fluid {
+    width: 100%;
     margin-top: 130px;
     padding: 10px 100px;
 }
@@ -287,35 +288,37 @@ export default {
     background-color: rgb(199, 208, 218);
     margin-bottom: 100px;
     margin-top: 30px;
+    width:100%
 }
 
 @media only screen and (max-width: 1024px) {
     body{
-        width:1024px;
+        width:100%;
     }
     .container-fluid {
-    width:800px;
+    width: 100%;
     margin-top: 130px;
-    padding: 5px 12px;
+    padding: 5px 5px;
 }
 .card {
     padding: 3px;
     border-radius: 5px;
     box-shadow:  1px 10px 10px 10px rgb(199, 194, 194);
     background-color: rgb(199, 208, 218);
+    width:100%
 }
 
 }
 @media only screen and (max-width: 425px) {
     body{
-        width:424px;
+        width:100%;
     }
     .container-fluid {
-    max-width:424px;
-    margin-top: 130px;
-    padding: 5px 12px;
-}
+        width:100%;
+        margin-top: 130px;
+        padding: 5px 5px;   }
 .card {
+    width:100%;
     padding: 3px;
     border-radius: 5px;
     box-shadow:  1px 10px 10px 10px rgb(199, 194, 194);
